@@ -3,13 +3,19 @@
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width:98%;
 }
+.eyechach{
+  Image{
+    width: 90%;
+  }
+}
 .officeInfo{
+  position: absolute;
+  top: 0;
+  right: 0;
   color:$main-color;
   display: flex;
   background: white;

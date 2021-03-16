@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.eyecache}>
-          <Image src="/img_main.jpg" alt="医院内の写真" layout={"fill"} />
+          <Image src="/img_main.jpg" alt="医院内の写真" width={1401} height={608} layout={"responsive"} />
           <div className={styles.officeInfo}>
             <div>
               <p className={styles.tel}><i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567</p>
