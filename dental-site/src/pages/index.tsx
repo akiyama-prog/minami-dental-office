@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.eyecache}>
-          <img src="" alt="医院内の写真" />
+          <Image src="/img_main.jpg" alt="医院内の写真" layout={"fill"} />
           <div className={styles.officeInfo}>
             <div>
               <p className={styles.tel}><i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567</p>
