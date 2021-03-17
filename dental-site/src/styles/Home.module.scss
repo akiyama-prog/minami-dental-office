@@ -1,0 +1,67 @@
+@import './globals.scss';
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  margin: 0 auto;
+  display: flex;
+  width:98%;
+}
+.eyecache{
+  position: relative;
+  .bgImg{
+    width: 100%;
+    height: auto;
+  }
+  .explaine{
+    position: absolute;
+    top: 36%;
+    right: 9%;
+    line-height: 4rem;
+    letter-spacing: .3rem;
+    font-size: .9rem;
+  }
+  .officeInfo, .logo{
+    position: absolute;
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+  .officeInfo{
+    top: -.5rem;
+    right: -.5rem;
+    color:$main-color;
+    display: flex;
+    div p:nth-child(2){
+      font-size: .8rem;
+    }
+  }
+  .logo{
+    bottom: -2rem;
+    left: 3.5rem;
+    width: 20%;
+  }
+  p{
+    margin: 0;
+  }
+  .tel{
+    font-size: 1.5rem;
+
+  }
+  .form{
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $main-color;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
