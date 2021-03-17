@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.eyecache}>
-          <img src="/img_main.jpg" alt="医院内の写真" />
+          <img className={styles.bgImg} src="/img_main.jpg" alt="医院内の写真" />
           <div className={styles.officeInfo}>
             <div>
               <p className={styles.tel}><i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567</p>
@@ -25,6 +25,7 @@ export default function Home() {
             患者様ひとりひとりに合った<br />
             最適な治療法をご提案
           </p>
+          <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
         </div>
       </main >
 
