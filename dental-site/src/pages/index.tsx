@@ -28,6 +28,22 @@ export default function Home() {
           </p>
           <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
         </div>
+
+        <div className={styles.about}>
+          <div className={styles.title}>
+            <img src="/item01.png" className={styles.item1} />
+            <p className={styles.jpAbout}>当院について</p>
+            <p className={styles.ABOUT}>ABOUT</p>
+          </div>
+          <p className={styles.describe}>
+            「歯並びが気になる!!」<br />
+            そんな時、気軽に来ていただけるクリニックでありたい。<br />
+            みなみ矯正歯科では、このような思いから無料矯正診断を行って<br />おります。<br />
+            皆様の口内環境を整えることを通して、心身ともに健康的な身体づくりを目指します。<br />
+            子どもから大人まで、全ての年齢の方の治療が可能です。スタッフ一同お待ちしております。
+          </p>
+          <img src="/img_about.jpg" alt="スタッフ写真" className={styles.staffPhoto} />
+        </div>
       </main >
 
       <footer className={styles.footer}>

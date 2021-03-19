@@ -1,9 +1,17 @@
 @import './globals.scss';
 
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  margin: 0 auto;
+  display: flex;
+  width:100%;
+  font-family: 'Quicksand', sans-serif;
+}
 .eyecache{
   position: relative;
   .bgImg{
-    width: 100%;
+    width: 98%;
     height: auto;
   }
   .explaine{
@@ -20,11 +28,6 @@
     border-radius: 1rem;
     padding: 1rem 2rem;
   }
-  .logo{
-    bottom: -2rem;
-    left: 3.5rem;
-    width: 20%;
-  }
   .officeInfo{
     top: -.5rem;
     right: -.5rem;
@@ -33,6 +36,11 @@
     div p:nth-child(2){
       font-size: .8rem;
     }
+  }
+  .logo{
+    bottom: -2rem;
+    left: 3.5rem;
+    width: 20%;
   }
   p{
     margin: 0;
@@ -50,6 +58,44 @@
     border: 1px solid $main-color;
     padding: 1rem 2rem;
     margin-left: 1rem;
+  }
+}
+.about{
+  display:flex;
+  padding: 10% 0 5% 0;
+  .title{
+    width: 30%;
+    position: relative;
+    text-align: right;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    .jpAbout,.ABOUT,.item1{
+      position: absolute;
+      color: $main-color;
+    }
+    .item1{
+      top: 15%;
+      right: 8%;
+    }
+    .jpAbout{
+      writing-mode: vertical-rl;
+      font-size: 1.5rem;
+      letter-spacing: .3rem;
+      top: -15%;
+      right: 9%;
+    }
+    .ABOUT{
+      border-bottom: solid 1px $main-color;
+      line-height: 2.5rem;
+      top: 32%;
+      right: 13%;
+    }
+  }
+  .describe{
+    width: 30%;
+  }
+  .staffPhoto{
+    width: 40%;
   }
 }
 @media (max-width: 600px) {
