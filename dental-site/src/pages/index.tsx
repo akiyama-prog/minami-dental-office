@@ -44,6 +44,40 @@ export default function Home() {
           </p>
           <img src="/img_about.jpg" alt="スタッフ写真" className={styles.staffPhoto} />
         </div>
+
+        <div className={styles.point}>
+          <img src="/item02-r.png" className={styles.item2r} />
+          <p className={styles.titelEn}>POINT</p>
+          <img src="/ttl-deco.png" className={styles.ttlDeco} />
+          <p className={styles.pointJp}>当院の３つのポイント</p>
+          <div className={styles.points}>
+            <div className={styles.pointItem}>
+              <img src="/img_point01.png" alt="院内写真" className={styles.insidePhoto} />
+              <div className={styles.smTitle}>
+                <p><span className={styles.pointNumber}>point1</span>　清潔な院内</p>
+                <img src="/ttl-bg.png" />
+              </div>
+              <p>診療室だけでなく、受付・待合・洗面スペース・お手洗いなども清潔感を大切にし、患者様に気持ちよく通っていただけるよう心がけています。</p>
+            </div>
+            <div className={styles.pointItem}>
+              <img src="/img_point02.png" alt="治療の様子" className={styles.insidePhoto} />
+              <div className={styles.smTitle}>
+                <p><span className={styles.pointNumber}>point2</span>　丁寧なカウンセリング</p>
+                <img src="/ttl-bg.png" />
+              </div>
+              <p>毎回、治療の経過の説明や相談時間を設け、疑問や悩みがある場合も相談しやすい環境を整えております。どんな小さな悩みでもお気軽にご相談ください。</p>
+            </div>
+            <div className={styles.pointItem}>
+              <img src="/img_point03.png" alt="ユニット写真" className={styles.insidePhoto} />
+              <div className={styles.smTitle}>
+                <p><span className={styles.pointNumber}>point3</span>　半個室の診療室</p>
+                <img src="/ttl-bg.png" />
+              </div>
+              <p>診察台ごとにパーテーションで区切られた半個室で、患者様のプライバシーを守ります。完全な個室は苦手という方にもおすすめです。</p>
+            </div>
+
+          </div>
+        </div>
       </main >
 
       <footer className={styles.footer}>
