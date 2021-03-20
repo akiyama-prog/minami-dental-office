@@ -93,9 +93,15 @@
   }
   .describe{
     width: 30%;
+    color: $letter-color;
+    margin: 5% 3%;
+    font-size: .8rem;
+    line-height: 1.5rem;
   }
   .staffPhoto{
     width: 40%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
   }
 }
 @media (max-width: 600px) {
