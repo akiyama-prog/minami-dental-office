@@ -54,7 +54,7 @@ export default function Home() {
             <div className={styles.pointItem}>
               <img src="/img_point01.png" alt="院内写真" className={styles.insidePhoto} />
               <div className={styles.smTitle}>
-                <p><span className={styles.pointNumber}>point1</span>　清潔な院内</p>
+                <p><span className={styles.pointNumber}>point1</span> 清潔な院内</p>
                 <img src="/ttl-bg.png" className={styles.ttlBg1} />
               </div>
               <p className={styles.describe}>診療室だけでなく、受付・待合・洗面スペース・お手洗いなども清潔感を大切にし、患者様に気持ちよく通っていただけるよう心がけています。</p>
@@ -62,7 +62,7 @@ export default function Home() {
             <div className={styles.pointItem}>
               <img src="/img_point02.png" alt="治療の様子" className={styles.insidePhoto} />
               <div className={styles.smTitle}>
-                <p><span className={styles.pointNumber}>point2</span>　丁寧なカウンセリング</p>
+                <p><span className={styles.pointNumber}>point2</span> 丁寧なカウンセリング</p>
                 <img src="/ttl-bg.png" className={styles.ttlBg2} />
               </div>
               <p className={styles.describe}>毎回、治療の経過の説明や相談時間を設け、疑問や悩みがある場合も相談しやすい環境を整えております。どんな小さな悩みでもお気軽にご相談ください。</p>
@@ -70,7 +70,7 @@ export default function Home() {
             <div className={styles.pointItem}>
               <img src="/img_point03.png" alt="ユニット写真" className={styles.insidePhoto} />
               <div className={styles.smTitle}>
-                <p><span className={styles.pointNumber}>point3</span>　半個室の診療室</p>
+                <p><span className={styles.pointNumber}>point3</span> 半個室の診療室</p>
                 <img src="/ttl-bg.png" className={styles.ttlBg3} />
               </div>
               <p className={styles.describe}>診察台ごとにパーテーションで区切られた半個室で、患者様のプライバシーを守ります。完全な個室は苦手という方にもおすすめです。</p>
@@ -78,10 +78,64 @@ export default function Home() {
           </div>
           <img src="/item02-l.png" className={styles.item2l} />
         </div>
+
+        <div className={styles.type}>
+
+        </div>
       </main >
 
-      <footer className={styles.footer}>
-
+      <footer>
+        <div className={styles.footer}>
+          <div className={styles.info}>
+            <div>
+              <p className={styles.address}>
+                〒457-0833<br />
+                愛知県名古屋市南区東又兵ヱ町8-21<br />
+                <img src="/ico_train.png" alt="電車マーク" />JR東海道本線「笠寺駅」徒歩5分
+              </p>
+              <p className={styles.formInfo}>
+                ご予約・お問い合わせ<br />
+                <i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567 <a href="" className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせフォーム</a>
+              </p>
+              <div className={styles.officeHours}>
+                <table>
+                  <tr>
+                    <td>診察時間</td>
+                    <td>月</td>
+                    <td>火</td>
+                    <td>水</td>
+                    <td>木</td>
+                    <td>金</td>
+                    <td>土</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 - 12:30</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                  </tr>
+                  <tr>
+                    <td>13:30 - 18:00</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                  </tr>
+                </table>
+                <p>休診日/ 土曜午後・日・祝</p>
+                <p>※当院は完全予約制です</p>
+              </div>
+            </div>
+            <div className={styles.map}><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6528.85001207716!2d136.91670649715837!3d35.096096920953116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bc714c909a1%3A0x9e51a3cae5d2fd81!2z44CSNDU3LTA4MzMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2X5Yy65p2x5Y-I5YW144Ox55S6!5e0!3m2!1sja!2sjp!4v1616322772605!5m2!1sja!2sjp" style={{ width: "400", height: "300", border: 0 }} allowfullscreen="" loading="lazy"></iframe></div>
+          </div>
+        </div>
       </footer>
     </div >
   )

@@ -1,13 +1,6 @@
 @import './globals.scss';
 
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  margin: 0 auto;
-  display: flex;
-  width:100%;
-  font-family: 'Quicksand', sans-serif;
-}
+//アイキャッチ
 .eyecache{
   position: relative;
   .bgImg{
@@ -60,6 +53,7 @@
     margin-left: 1rem;
   }
 }
+//当院について
 .about{
   display:flex;
   padding: 10% 0 6% 0;
@@ -104,7 +98,7 @@
     border-bottom-left-radius: 1rem;
   }
 }
-
+//3つのポイント
 .point{
   background: $bg-main-color;
   padding: 5% 0;
@@ -138,7 +132,7 @@
   .points{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 58%;
     margin: 3rem auto;
     p{
       color: $letter-color;
@@ -163,7 +157,7 @@
           left: 0;
           right: 0;
           margin: 1rem auto;
-          letter-spacing: .2rem;
+          letter-spacing: .1rem;
         }
         .pointNumber{
           color: $main-color;
@@ -174,19 +168,36 @@
           z-index: 10;
         }
         .ttlBg1{
-          top: 1.3rem;
-          left: 3.1rem;
+          top: 1.4rem;
+          left: 2.8rem;
         }
         .ttlBg2{
-          top: 1.3rem;
-          left: .1rem;
+          top: 1.4rem;
+          left: -0.1rem;
         }
         .ttlBg3{
-          top: 1.3rem;
-          left: 2rem;
+          top: 1.4rem;
+          left: 1.5rem;
         }
       }
     }
+  }
+}
+
+//矯正の種類
+.type{
+  height: 500px;
+}
+
+//footer
+.footer{
+  background: $bg-main-color;
+  color: $main-color;
+  .info{
+    text-align: center;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 600px) {
