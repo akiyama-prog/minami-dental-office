@@ -62,7 +62,7 @@
 }
 .about{
   display:flex;
-  padding: 10% 0 5% 0;
+  padding: 10% 0 6% 0;
   .title{
     width: 30%;
     position: relative;
@@ -110,14 +110,18 @@
   padding: 5% 0;
   text-align: center;
   position: relative;
-  .item2r{
+  .item2r,.item2l{
     position: absolute;
     width: 20%;
     height: auto;
   }
   .item2r{
-    right: -5%;
-    top: -3%;
+    right: -2%;
+    top: -14%;
+  }
+  .item2l{
+    left: -2%;
+    bottom: -17%;
   }
   .titelEn{
     color: $main-color;
@@ -130,6 +134,59 @@
   }
   .pointJp{
     color: $main-color;
+  }
+  .points{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 3rem auto;
+    p{
+      color: $letter-color;
+    }
+    .pointItem{
+      width: 30%;
+      .insidePhoto{
+        width: 80%;
+      }
+      .describe{
+        margin-top: 3rem;
+        width: 100%;
+        text-align: left;
+        font-size: .9rem;
+        line-height: 2rem;
+      }
+      .smTitle{
+        position: relative;
+        p:first-child{
+          z-index: 20;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 1rem auto;
+          letter-spacing: .2rem;
+        }
+        .pointNumber{
+          color: $main-color;
+        }
+        .ttlBg1, .ttlBg2, .ttlBg3{
+          position: absolute;
+          width: 4rem;
+          z-index: 10;
+        }
+        .ttlBg1{
+          top: 1.3rem;
+          left: 3.1rem;
+        }
+        .ttlBg2{
+          top: 1.3rem;
+          left: .1rem;
+        }
+        .ttlBg3{
+          top: 1.3rem;
+          left: 2rem;
+        }
+      }
+    }
   }
 }
 @media (max-width: 600px) {
