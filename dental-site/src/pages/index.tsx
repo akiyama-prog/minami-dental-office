@@ -91,11 +91,14 @@ export default function Home() {
               <p className={styles.address}>
                 〒457-0833<br />
                 愛知県名古屋市南区東又兵ヱ町8-21<br />
-                <img src="/ico_train.png" alt="電車マーク" />JR東海道本線「笠寺駅」徒歩5分
               </p>
+              <div className={styles.station}>
+                <img src="/ico_train.png" alt="電車マーク" />
+                <p>JR東海道本線「笠寺駅」徒歩5分</p>
+              </div>
               <p className={styles.formInfo}>
                 ご予約・お問い合わせ<br />
-                <i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567 <a href="" className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせフォーム</a>
+                <i className="fas fa-phone fa-rotate-90"></i> <span className={styles.tel}>052-0123-4567</span>　<a href="" className={styles.form}><i className="fas fa-envelope"></i> <span className={styles.borderBottom}>お問い合わせフォーム</span></a>
               </p>
               <div className={styles.officeHours}>
                 <table>
