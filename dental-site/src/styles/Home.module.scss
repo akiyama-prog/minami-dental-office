@@ -194,10 +194,17 @@
   background: $bg-main-color;
   color: $main-color;
   .info{
-    text-align: center;
+    padding: 5% 0;
     display: flex;
-    width: 70%;
+    justify-content: space-between;
+    width: 58%;
     margin: 0 auto;
+    .map{
+      width: 50%;
+      iframe{
+        width: 600;
+      }
+    }
   }
 }
 @media (max-width: 600px) {
