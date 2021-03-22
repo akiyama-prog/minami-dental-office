@@ -193,6 +193,9 @@
 .footer{
   background: $bg-main-color;
   color: $main-color;
+  address{
+    font-style: normal;
+  }
   .info{
     padding: 3% 0;
     display: flex;
