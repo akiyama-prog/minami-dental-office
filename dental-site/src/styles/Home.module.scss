@@ -194,7 +194,7 @@
   background: $bg-main-color;
   color: $main-color;
   .info{
-    padding: 5% 0;
+    padding: 3% 0;
     display: flex;
     justify-content: space-between;
     width: 58%;
@@ -215,19 +215,45 @@
     }
     .formInfo{
       margin: 1rem 0;
+      .tel{
+        font-size: 1.5rem;
+      }
     }
     .form{
       color: inherit;
       text-decoration: none;
       .borderBottom{
-        border-bottom: solid 1px $main-color;
+        border-bottom: solid 1px #99babf;
       }
+    }
+    .officeHours table{
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      border-collapse: separate;
+      border-spacing: 0px;
+      width: 100%;
+      text-align: center;
+      td{
+        border-bottom: 1px solid #99babf;
+        border-right: 1px solid #99babf;
+      }
+      .firstCell{
+        width: 7rem;
+      }
+      .borderRNone{
+        border-right:none;
+      }
+      .borderBNone{
+        border-bottom: none;
+      }
+    }
+    .closedDays{
+      display: flex;
+      justify-content: space-between;
     }
     .map{
       width: 50%;
-      iframe{
-        width: 600;
-      }
     }
   }
 }
