@@ -143,6 +143,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <p className={styles.small}><small>©️２０２１ Minami Orthodontic Dental Clinic</small></p>
       </footer>
     </div >
   )

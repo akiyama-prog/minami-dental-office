@@ -260,6 +260,11 @@
     }
   }
 }
+.small{
+  text-align: center;
+  margin: 1rem;
+  color: $main-color;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
