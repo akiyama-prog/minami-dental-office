@@ -49,7 +49,7 @@ export default function Home() {
           <img src="/item02-r.png" className={styles.item2r} />
           <p className={styles.titelEn}>POINT</p>
           <img src="/ttl-deco.png" className={styles.ttlDeco} />
-          <p className={styles.pointJp}>当院の３つのポイント</p>
+          <p className={styles.titleJp}>当院の３つのポイント</p>
           <div className={styles.points}>
             <div className={styles.pointItem}>
               <img src="/img_point01.png" alt="院内写真" className={styles.insidePhoto} />
@@ -80,7 +80,27 @@ export default function Home() {
         </div>
 
         <div className={styles.type}>
-
+          <p className={styles.titelEn}>TYPE</p>
+          <img src="/ttl-deco.png" className={styles.ttlDeco} />
+          <p className={styles.titleJp}>矯正の種類</p>
+          <div className={styles.types}>
+            <div>
+              <img src="" alt="表面矯正" />
+              <p>表面矯正</p>
+            </div>
+            <div>
+              <img src="" alt="裏側矯正" />
+              <p>裏側矯正</p>
+            </div>
+            <div>
+              <img src="" alt="小児矯正" />
+              <p>小児矯正</p>
+            </div>
+            <div>
+              <img src="" alt="マウスピース矯正" />
+              <p>マウスピース矯正</p>
+            </div>
+          </div>
         </div>
       </main >
 
