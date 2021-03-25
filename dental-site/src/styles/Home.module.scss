@@ -99,6 +99,18 @@
   }
 }
 //3つのポイント
+.titelEn{
+  color: $main-color;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  margin: 0;
+}
+.ttlDeco{
+  width: 3rem;
+}
+.titleJp{
+  color: $main-color;
+}
 .point{
   background: $bg-main-color;
   padding: 5% 0;
@@ -117,18 +129,7 @@
     left: -2%;
     bottom: -17%;
   }
-  .titelEn{
-    color: $main-color;
-    font-size: 2rem;
-    letter-spacing: .2rem;
-    margin: 0;
-  }
-  .ttlDeco{
-    width: 3rem;
-  }
-  .pointJp{
-    color: $main-color;
-  }
+
   .points{
     display: flex;
     justify-content: space-between;
@@ -186,7 +187,73 @@
 
 //矯正の種類
 .type{
-  height: 500px;
+  padding: 5% 0;
+  text-align: center;
+  .types{
+    display: flex;
+    justify-content: space-between;
+    width: 58%;
+    margin: 3rem auto;
+  }
+  .forBeginner{
+    position: relative;
+    margin: 0 auto;
+    width: 58%;
+    .bgFukidashi{
+      width: 100%;
+    }
+    .contents{
+      position: absolute;
+      color: $main-color;
+      text-align: center;
+      top: 1.5rem;
+      left: 10%;
+      .title{
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+        margin-bottom: .5rem;
+        img{
+          width: 1.5rem;
+          vertical-align: middle;
+        }
+        .titleEn{
+          font-size: .8rem;
+          letter-spacing: .1rem;
+        }
+      }
+      .counseling{
+        letter-spacing: .2rem;
+        vertical-align: middle;
+        font-size: 1.2rem;
+        img{
+          height: 1rem;
+        }
+      }
+      .worry{
+        color: black;
+        background: white;
+        border-radius: 3rem;
+        display: table;
+        margin: 1rem auto;
+        width: 75%;
+        padding: .5rem 1.5rem;
+        vertical-align: middle;
+        p{
+          display: table-cell;
+          text-align: center;
+        }
+        img{
+          text-align: left;
+          height: 1rem;
+          display: table-cell;
+        }
+        .etc{
+          display: table-cell;
+          text-align: right;
+        }
+      }
+    }
+  }
 }
 
 //footer

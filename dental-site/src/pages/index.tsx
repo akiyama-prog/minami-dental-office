@@ -49,7 +49,7 @@ export default function Home() {
           <img src="/item02-r.png" className={styles.item2r} />
           <p className={styles.titelEn}>POINT</p>
           <img src="/ttl-deco.png" className={styles.ttlDeco} />
-          <p className={styles.pointJp}>当院の３つのポイント</p>
+          <p className={styles.titleJp}>当院の３つのポイント</p>
           <div className={styles.points}>
             <div className={styles.pointItem}>
               <img src="/img_point01.png" alt="院内写真" className={styles.insidePhoto} />
@@ -80,7 +80,46 @@ export default function Home() {
         </div>
 
         <div className={styles.type}>
-
+          <p className={styles.titelEn}>TYPE</p>
+          <img src="/ttl-deco.png" className={styles.ttlDeco} />
+          <p className={styles.titleJp}>矯正の種類</p>
+          <div className={styles.types}>
+            <div>
+              <img src="" alt="表面矯正" />
+              <p>表面矯正</p>
+            </div>
+            <div>
+              <img src="" alt="裏側矯正" />
+              <p>裏側矯正</p>
+            </div>
+            <div>
+              <img src="" alt="小児矯正" />
+              <p>小児矯正</p>
+            </div>
+            <div>
+              <img src="" alt="マウスピース矯正" />
+              <p>マウスピース矯正</p>
+            </div>
+          </div>
+          <div className={styles.forBeginner}>
+            <img src="/bg_fukidashi.png" alt="吹き出し" className={styles.bgFukidashi} />
+            <div className={styles.contents}>
+              <p className={styles.title}><img src="ico_beginner.png" alt="初心者マーク" /> 初めての方へ<br />
+                <span className={styles.titleEn}>for beginner</span></p>
+              <p className={styles.counseling}><img src="/item_beginner-l.png" /> 初めての方はまず無料カウンセリングから！<img src="/item_beginner-r.png" /></p>
+              <div className={styles.worry}>
+                <img src="/item_arrow.png" /><p>矯正したいけれど迷ってる…。話だけ聞きたい！</p>
+              </div>
+              <div className={styles.worry}>
+                <img src="/item_arrow.png" /><p>費用がどれくらいかかるか分からなくて不安…。</p>
+              </div>
+              <div className={styles.worry}>
+                <img src="/item_arrow.png" /><p>どんな治療になる？どれくらい痛い？</p><p className={styles.
+                  etc}>etc…</p>
+              </div>
+              <p>歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
+            </div>
+          </div>
         </div>
       </main >
 
