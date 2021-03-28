@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Form.module.scss'
-import Footer from '../../components/layout'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import Link from 'next/link'
 
 export default function Form() {
@@ -14,6 +15,7 @@ export default function Form() {
                 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"></link>
                 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"></link>
             </Head>
+            <Header></Header>
             <main>
                 <h1>hello</h1>
             </main>
