@@ -1,4 +1,5 @@
 import styles from '../src/styles/Home.module.scss'
+import Link from 'next/link'
 
 export default function Footer({ children }) {
     return (
@@ -17,7 +18,8 @@ export default function Footer({ children }) {
                             </div>
                             <p className={styles.formInfo}>
                                 ご予約・お問い合わせ<br />
-                                <i className="fas fa-phone fa-rotate-90"></i> <span className={styles.tel}>052-0123-4567</span>　<a href="" className={styles.form}><i className="fas fa-envelope"></i> <span className={styles.borderBottom}>お問い合わせフォーム</span></a>
+                                <i className="fas fa-phone fa-rotate-90"></i> <span className={styles.tel}>052-0123-4567</span>
+                                <Link href="/form"><a className={styles.form}><i className="fas fa-envelope"></i> <span className={styles.borderBottom}>お問い合わせフォーム</span></a></Link>
                             </p>
                         </address>
                         <div className={styles.officeHours}>
