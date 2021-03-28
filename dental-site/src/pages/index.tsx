@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import Image from 'next/image'
 import Footer from '../../components/layout'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
               <p className={styles.tel}><i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567</p>
               <p>受付時間　10:00〜18:00　＊日・祝休業</p>
             </div>
-            <a href="" className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせ</a>
+            <Link href="/form"><a className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
           </div>
           <p className={styles.explaine}>
             治療期間も快適にお過ごしいただきたいから<br />
