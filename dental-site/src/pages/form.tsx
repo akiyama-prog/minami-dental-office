@@ -16,9 +16,10 @@ export default function Form() {
                 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"></link>
             </Head>
             <Header></Header>
-            <main>
-                <h1>hello</h1>
+            <main style={{ height: "500px" }}>
+
             </main>
-        </div>
+            <Footer></Footer>
+        </div >
     )
 }
