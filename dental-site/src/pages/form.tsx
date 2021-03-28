@@ -16,7 +16,16 @@ export default function Form() {
                 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"></link>
             </Head>
             <Header></Header>
-            <main style={{ height: "500px" }}>
+            <main>
+                <div className={styles.contact}>
+                    <div className={styles.title}>
+                        <p className={styles.titelEn}>CONTACT</p>
+                        <img src="/ttl-deco.png" className={styles.ttlDeco} />
+                        <p className={styles.titleJp}>お問い合わせ</p>
+                    </div>
+                    <p className={styles.attention}><span className={styles.required}>＊</span>は必須項目です。</p>
+
+                </div>
 
             </main>
             <Footer></Footer>

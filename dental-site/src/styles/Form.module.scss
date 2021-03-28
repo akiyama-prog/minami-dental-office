@@ -29,3 +29,32 @@
         width: 100%;
     }
 }
+.contact{
+    padding: 5% 0;
+    width: 50%;
+    margin: 0 auto;
+    .title{
+        text-align: center;
+        .titelEn{
+            color: $main-color;
+            font-size: 2rem;
+            letter-spacing: .2rem;
+            margin: 0;
+          }
+          .ttlDeco{
+            width: 3rem;
+          }
+          .titleJp{
+            color: $main-color;
+          }
+    }
+    .attention{
+        color: $main-color;
+        border: 1px solid $main-color;
+        padding: .5rem 1rem;
+        width: 21%;
+    }
+    .required{
+        color: red;
+    }
+}
