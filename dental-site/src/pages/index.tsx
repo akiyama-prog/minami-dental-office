@@ -1,19 +1,13 @@
-import Head from 'next/head'
+
 import styles from '../styles/Home.module.scss'
 import Footer from '../../components/Footer'
+import Head from '../../components/Head'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>みなみ矯正歯科</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"></link>
-      </Head>
+      <Head title={'みなみ矯正歯科'}></Head>
       <main>
         <div className={styles.eyecache}>
           <img className={styles.bgImg} src="/img_main.jpg" alt="医院内の写真" />

@@ -29,3 +29,63 @@
         width: 100%;
     }
 }
+.contact{
+    padding: 5% 0;
+    width: 50%;
+    margin: 0 auto;
+    .title{
+        text-align: center;
+        .titelEn{
+            color: $main-color;
+            font-size: 2rem;
+            letter-spacing: .2rem;
+            margin: 0;
+          }
+          .ttlDeco{
+            width: 3rem;
+          }
+          .titleJp{
+            color: $main-color;
+          }
+    }
+    .attention{
+        color: $main-color;
+        border: 1px solid $main-color;
+        padding: .5rem 1rem;
+        width: 26%;
+        margin-left: 5%;
+    }
+    .required{
+        color: red;
+    }
+}
+form{
+    .field,.radioButton,.dateNtime{
+        display: flex;
+    }
+    .email{
+        width: 200%;
+    }
+    .textarea{
+        height: 10rem;
+        width: 193%;
+    }
+    .label{
+        margin-right: 2rem;
+        width: 30%;
+        text-align: right;
+    }
+    .radioButton div:first-child,.dateNtime input:first-child{
+        margin-right: 1rem;
+    }
+    .submitBtn{
+        text-align: center;
+        margin-top: 2.5rem;
+        button{
+            background-color: $main-color;
+            color: white;
+            border: none;
+            padding: .8rem 5rem;
+        }
+    }
+}
