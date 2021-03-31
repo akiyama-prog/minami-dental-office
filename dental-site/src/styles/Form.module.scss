@@ -53,13 +53,39 @@
         border: 1px solid $main-color;
         padding: .5rem 1rem;
         width: 26%;
+        margin-left: 5%;
     }
     .required{
         color: red;
     }
 }
 form{
-    .field{
+    .field,.radioButton,.dateNtime{
         display: flex;
+    }
+    .email{
+        width: 200%;
+    }
+    .textarea{
+        height: 10rem;
+        width: 193%;
+    }
+    .label{
+        margin-right: 2rem;
+        width: 30%;
+        text-align: right;
+    }
+    .radioButton div:first-child,.dateNtime input:first-child{
+        margin-right: 1rem;
+    }
+    .submitBtn{
+        text-align: center;
+        margin-top: 2.5rem;
+        button{
+            background-color: $main-color;
+            color: white;
+            border: none;
+            padding: .8rem 5rem;
+        }
     }
 }

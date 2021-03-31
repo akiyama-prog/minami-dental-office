@@ -68,8 +68,8 @@ export default function Form() {
                         {/* スパム対策 */}
                         <input type="text" name="honeypot" style={{ display: "none" }} />
                         <div className={styles.field}>
-                            <p><span className={styles.required}>＊</span>お問い合わせ内容</p>
-                            <div>
+                            <p className={styles.label}><span className={styles.required}>＊</span>お問い合わせ内容</p>
+                            <div className={styles.radioButton}>
                                 <div class='form-check'>
                                     <input type="radio" name="subject" id='subject1' value="お問い合わせ" class="form-check-input" onChange={handleChange} required />
                                     <label class='form-check-label' for='subject1'>お問い合わせ</label>
@@ -81,11 +81,11 @@ export default function Form() {
                             </div>
                         </div>
                         <div className={styles.field}>
-                            <label>ご希望日時</label>
-                            <p>
+                            <label className={styles.label}>ご希望日時</label>
+                            <p className={styles.dateNtime}>
                                 <input type="date" name="$date" className="form-control" onChange={handleChange} />
                                 <select name="$time" className="form-control" required onChange={handleChange}>
-                                    <option value="">▼時間を選択してください</option>
+                                    <option value="">▼時間を選択</option>
                                     <option value="10:00~10:30">10:00~10:30</option>
                                     <option value="10:30~11:00">10:30~11:00</option>
                                     <option value="11:00~11:30">11:00~11:30</option>
@@ -104,42 +104,44 @@ export default function Form() {
                             </p>
                         </div>
                         <div className={styles.field} class='form-group'>
-                            <label for="name"><span className={styles.required}>＊</span>氏名(漢字)</label>
+                            <label className={styles.label} for="name"><span className={styles.required}>＊</span>氏名(漢字)</label>
                             <p>
                                 <input type="text" name="name" onChange={handleChange} id='name' className="form-control" required />
                             </p>
                         </div>
                         <div className={styles.field} class='form-group'>
-                            <label for="kana"><span className={styles.required}>＊</span>氏名(カナ)</label>
+                            <label className={styles.label} for="kana"><span className={styles.required}>＊</span>氏名(カナ)</label>
                             <p>
                                 <input type="text" name="$kana" id='kana' onChange={handleChange} className="form-control" required />
                             </p>
                         </div>
                         <div className={styles.field} class='form-group'>
-                            <label for="phone"><span className={styles.required}>＊</span>電話番号</label>
+                            <label className={styles.label} for="phone"><span className={styles.required}>＊</span>電話番号</label>
                             <p>
                                 <input type="text" name="phone" id='phone' onChange={handleChange} className="form-control" required />
                             </p>
                         </div>
                         <div className={styles.field} class='form-group'>
-                            <label for="email"><span className={styles.required}>＊</span>メールアドレス</label>
+                            <label className={styles.label} for="email"><span className={styles.required}>＊</span>メールアドレス</label>
                             <p>
-                                <input type="text" name="email" id='email' onChange={handleChange} className="form-control" required />
+                                <input type="text" name="email" id='email' onChange={handleChange} className={`${styles.email} form-control`} required />
                             </p>
                         </div>
                         <div className={styles.field} class='form-group'>
-                            <label for="email_confirm"><span className={styles.required}>＊</span>メールアドレス(確認用)</label>
+                            <label className={styles.label} for="email_confirm"><span className={styles.required}>＊</span>メールアドレス(確認用)</label>
                             <p>
-                                <input type="text" name="email_confirm" id='email_confirm' onChange={handleChange} className="form-control" required />
+                                <input type="text" name="email_confirm" id='email_confirm' onChange={handleChange} className={`${styles.email} form-control`} required />
                             </p>
                         </div>
                         <div className={styles.field} class='form-group'>
-                            <label for="message">お問い合わせ内容</label>
+                            <label className={styles.label} for="message">お問い合わせ内容</label>
                             <p>
-                                <textarea name="message" id='message' onChange={handleChange} className="form-control" />
+                                <textarea name="message" id='message' onChange={handleChange} className={`${styles.textarea} form-control`} />
                             </p>
                         </div>
-                        <button type="submit" className={styles.submitBtn}>入力確認</button>
+                        <div className={styles.submitBtn}>
+                            <button type="submit">入力確認</button>
+                        </div>
                     </form>
                 </div>
 
