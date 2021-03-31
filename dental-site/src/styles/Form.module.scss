@@ -29,6 +29,7 @@
         width: 100%;
     }
 }
+//フォームページ
 .contact{
     padding: 5% 0;
     width: 50%;
@@ -87,5 +88,23 @@ form{
             border: none;
             padding: .8rem 5rem;
         }
+    }
+}
+//thunxページ
+.thunx{
+    margin-top: 3% ;
+    margin-bottom: 7%;
+    margin-left: 18%;
+    p{
+        color: $letter-color;
+    }
+    h2{
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+    .hr{
+        border-top:1px solid $main-color;
+        width:1.5rem;
+        margin-left: 0;
     }
 }

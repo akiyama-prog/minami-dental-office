@@ -9,7 +9,13 @@ export default function Form() {
             <Head title={'みなみ矯正歯科'}></Head>
             <Header></Header>
             <main>
-                <h1>thenk you</h1>
+                <div className={styles.thunx}>
+                    <h2>送信完了</h2>
+                    <hr className={styles.hr}></hr>
+                    <p>この度はお問い合わせ及びご予約いただき誠にありがとうございました。<br />
+                        改めて担当者よりご連絡をさせていただきます。
+                    </p>
+                </div>
             </main>
             <Footer></Footer>
         </div>
