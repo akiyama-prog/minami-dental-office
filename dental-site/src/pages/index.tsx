@@ -2,7 +2,9 @@
 import styles from '../styles/Home.module.scss'
 import Footer from '../../components/Footer'
 import Head from '../../components/Head'
+import Info from '../../components/Info'
 import Link from 'next/link'
+import { info } from 'console'
 
 export default function Home() {
   return (
@@ -12,10 +14,7 @@ export default function Home() {
         <div className={styles.eyecache}>
           <img className={styles.bgImg} src="/img_main.jpg" alt="医院内の写真" />
           <div className={styles.officeInfo}>
-            <div>
-              <p className={styles.tel}><i className="fas fa-phone fa-rotate-90"></i> 052-0123-4567</p>
-              <p>受付時間　10:00〜18:00　＊日・祝休業</p>
-            </div>
+            <Info></Info>
             <Link href="/form"><a className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
           </div>
           <p className={styles.explaine}>
