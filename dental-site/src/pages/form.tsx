@@ -118,7 +118,7 @@ export default function Form() {
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="phone"><span className={styles.required}>＊</span>電話番号</label>
                             <p>
-                                <input type="text" name="phone" id='phone' onChange={handleChange} className="form-control" required />
+                                <input type="text" name="phone" id='phone' onChange={handleChange} className="form-control" placeholder="ハイフンなし" required pattern="\d{11}$" />
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
