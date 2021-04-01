@@ -112,7 +112,7 @@ export default function Form() {
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="kana"><span className={styles.required}>＊</span>氏名(カナ)</label>
                             <p>
-                                <input type="text" name="$kana" id='kana' onChange={handleChange} className="form-control" required />
+                                <input type="text" name="$kana" id='kana' onChange={handleChange} className="form-control" required pattern="[\u30A1-\u30F6]*" />
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
