@@ -4,8 +4,10 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Router from 'next/router';
 import { useState } from 'react';
+import { render } from 'react-dom';
 
 export default function Form() {
+    //ステートフック
     const [contact, setContact] = useState({
         subject: '',
         name: '',
@@ -18,12 +20,38 @@ export default function Form() {
         replyTo: 'autumn56y@gmail.com',
         accessKey: process.env.access_key,
     });
+    const [errorMessage, setErrorMessage] = useState({
+        name: '',
+        kana: '',
+        date: '',
+        time: '',
+        email: '',
+        phone: '',
+        message: '',
+    });
     const [response, setResponse] = useState({
         type: '',
         message: '',
     });
-    const handleChange = e =>
+    //ステートの値を変更
+    const handleChange = e => {
         setContact({ ...contact, [e.target.name]: e.target.value });
+        setErrorMessage({ ...errorMessage, [e.target.name]: validator(e) });
+    }
+    //バリデーションルーター
+    const validator = (e) => {
+        switch (e.target.name) {
+            case 'name':
+                return nameValidation(e.target.value);
+        }
+    }
+    //各バリデーション
+    const nameValidation = (value) => {
+        if (!value) return '＊お名前を入力してください。';
+        const regex = /^[ぁ-んァ-ヶー一-龠]+$/;
+        if (!regex.test(value)) return '※正しい形式で入力してください';
+        return '';
+    }
     const handleSubmit = async e => {
         e.preventDefault();
         try {
@@ -106,13 +134,13 @@ export default function Form() {
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="name"><span className={styles.required}>＊</span>氏名(漢字)</label>
                             <p>
-                                <input type="text" name="name" onChange={handleChange} id='name' className="form-control" required />
+                                <input type="text" name="name" onChange={handleChange} id='name' className="form-control" />{errorMessage.name}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="kana"><span className={styles.required}>＊</span>氏名(カナ)</label>
                             <p>
-                                <input type="text" name="$kana" id='kana' onChange={handleChange} className="form-control" required pattern="[\u30A1-\u30F6]*" />
+                                <input type="text" name="$kana" id='kana' onChange={handleChange} className="form-control" required pattern="[\u30A1-\u30F6]*" />{errorMessage.name}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
