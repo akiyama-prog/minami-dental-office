@@ -23,9 +23,8 @@ export default function Form() {
     const [errorMessage, setErrorMessage] = useState({
         name: '',
         kana: '',
-        date: '',
-        time: '',
         email: '',
+        email_confirm: '',
         phone: '',
         message: '',
     });
@@ -38,20 +37,61 @@ export default function Form() {
         setContact({ ...contact, [e.target.name]: e.target.value });
         setErrorMessage({ ...errorMessage, [e.target.name]: validator(e) });
     }
-    //バリデーションルーター
+    //バリデーション
+    const validation = (e) => {
+        setErrorMessage({ ...errorMessage, [e.target.name]: validator(e) });
+    }
     const validator = (e) => {
         switch (e.target.name) {
             case 'name':
                 return nameValidation(e.target.value);
+            case 'kana':
+                return kanaValidation(e.target.value);
+            case 'phone':
+                return phoneValidation(e.target.value);
+            case 'email':
+                return emailValidation(e.target.value);
+            case 'email_confirm':
+                return emailConfirmValidation(e.target.value);
+            case 'message':
+                return messageValidation(e.target.value);
         }
     }
     //各バリデーション
     const nameValidation = (value) => {
-        if (!value) return '＊お名前を入力してください。';
-        const regex = /^[ぁ-んァ-ヶー一-龠]+$/;
-        if (!regex.test(value)) return '※正しい形式で入力してください';
+        if (!value) return '＊氏名を入力してください';
+        const regexName = /^[ぁ-んァ-ヶー一-龠]+$/;
+        if (!regexName.test(value)) return '※正しい形式で入力してください';
         return '';
     }
+    const kanaValidation = (value) => {
+        if (!value) return '＊カナを入力してください';
+        const regexKana = /^[ア-ン゛゜ァ-ォャ-ョー「」、]+$/;
+        if (!regexKana.test(value)) return '※全角カタカナで入力してください';
+        return '';
+    }
+    const phoneValidation = (value) => {
+        if (!value) return '＊電話番号を入力してください';
+        const regexPhone = /^[0-9]+$/;
+        if (!regexPhone.test(value)) return '※ハイフンなしの半角数字で入力してください';
+        return '';
+    }
+    const emailValidation = (value) => {
+        if (!value) return '＊メールアドレスを入力してください';
+        const regexEmail = /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/;
+        if (!regexEmail.test(value)) return '※正しい形式で入力してください';
+        return '';
+    }
+    const emailConfirmValidation = (value) => {
+        if (!value) return '＊確認用メールアドレスを入力してください';
+        if (contact.email !== value) return '＊メールアドレスが一致しません';
+        return '';
+    }
+    const messageValidation = (value) => {
+        if (value.length > 500) return 'お問い合わせ内容は500字以内で入力してください';
+        return '';
+    }
+
     const handleSubmit = async e => {
         e.preventDefault();
         try {
@@ -134,41 +174,41 @@ export default function Form() {
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="name"><span className={styles.required}>＊</span>氏名(漢字)</label>
                             <p>
-                                <input type="text" name="name" onChange={handleChange} id='name' className="form-control" />{errorMessage.name}
+                                <input type="text" name="name" onChange={handleChange} onBlur={validation} id='name' className="form-control" />{errorMessage.name}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="kana"><span className={styles.required}>＊</span>氏名(カナ)</label>
                             <p>
-                                <input type="text" name="$kana" id='kana' onChange={handleChange} className="form-control" required pattern="[\u30A1-\u30F6]*" />{errorMessage.name}
+                                <input type="text" name="kana" id='kana' onChange={handleChange} onBlur={validation} className="form-control" required pattern="[\u30A1-\u30F6]*" />{errorMessage.kana}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="phone"><span className={styles.required}>＊</span>電話番号</label>
                             <p>
-                                <input type="text" name="phone" id='phone' onChange={handleChange} className="form-control" placeholder="ハイフンなし" required pattern="\d{11}$" />
+                                <input type="text" name="phone" id='phone' onChange={handleChange} onBlur={validation} className="form-control" placeholder="ハイフンなし" />{errorMessage.phone}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="email"><span className={styles.required}>＊</span>メールアドレス</label>
                             <p>
-                                <input type="text" name="email" id='email' onChange={handleChange} className={`${styles.email} form-control`} required />
+                                <input type="text" name="email" id='email' onChange={handleChange} onBlur={validation} className={`${styles.email} form-control`} required />{errorMessage.email}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="email_confirm"><span className={styles.required}>＊</span>メールアドレス(確認用)</label>
                             <p>
-                                <input type="text" name="email_confirm" id='email_confirm' onChange={handleChange} className={`${styles.email} form-control`} required />
+                                <input type="text" name="email_confirm" id='email_confirm' onChange={handleChange} onBlur={validation} className={`${styles.email} form-control`} required />{errorMessage.email_confirm}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} for="message">お問い合わせ内容</label>
                             <p>
-                                <textarea name="message" id='message' onChange={handleChange} className={`${styles.textarea} form-control`} />
+                                <textarea name="message" id='message' onChange={handleChange} onBlur={validation} className={`${styles.textarea} form-control`} />{errorMessage.message}
                             </p>
                         </div>
                         <div className={styles.submitBtn}>
-                            <button type="submit">入力確認</button>
+                            <button type="submit" disabled={!contact.name || !contact.kana || !contact.email || errorMessage.email_confirm !== '' || errorMessage.message !== ''}>入力確認</button>
                         </div>
                     </form>
                 </div>
