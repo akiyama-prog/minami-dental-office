@@ -173,37 +173,37 @@ export default function Form() {
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="name"><span className={styles.required}>＊</span>氏名(漢字)</label>
-                            <p>
+                            <p className={styles.errorMessage}>
                                 <input type="text" name="name" onChange={handleChange} onBlur={validation} id='name' className="form-control" />{errorMessage.name}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="kana"><span className={styles.required}>＊</span>氏名(カナ)</label>
-                            <p>
+                            <p className={styles.errorMessage}>
                                 <input type="text" name="kana" id='kana' onChange={handleChange} onBlur={validation} className="form-control" required pattern="[\u30A1-\u30F6]*" />{errorMessage.kana}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="phone"><span className={styles.required}>＊</span>電話番号</label>
-                            <p>
+                            <p className={styles.errorMessage}>
                                 <input type="text" name="phone" id='phone' onChange={handleChange} onBlur={validation} className="form-control" placeholder="ハイフンなし" />{errorMessage.phone}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="email"><span className={styles.required}>＊</span>メールアドレス</label>
-                            <p>
+                            <p className={styles.errorMessage}>
                                 <input type="text" name="email" id='email' onChange={handleChange} onBlur={validation} className={`${styles.email} form-control`} required />{errorMessage.email}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="email_confirm"><span className={styles.required}>＊</span>メールアドレス(確認用)</label>
-                            <p>
+                            <p className={styles.errorMessage}>
                                 <input type="text" name="email_confirm" id='email_confirm' onChange={handleChange} onBlur={validation} className={`${styles.email} form-control`} required />{errorMessage.email_confirm}
                             </p>
                         </div>
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="message">お問い合わせ内容</label>
-                            <p>
+                            <p className={styles.errorMessage}>
                                 <textarea name="message" id='message' onChange={handleChange} onBlur={validation} className={`${styles.textarea} form-control`} />{errorMessage.message}
                             </p>
                         </div>
