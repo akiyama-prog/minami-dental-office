@@ -5,6 +5,45 @@ import Footer from '../../components/Footer'
 import Router from 'next/router';
 import { useState } from 'react';
 import { render } from 'react-dom';
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
+
+function SelectSubject(props) {
+    if (props.subject === '無料カウンセリング予約') {
+        return <FormDate setContact={props.setContact} contact={props.contact} />;
+    }
+    return null;
+}
+
+function FormDate(props) {
+    const handleChange = (e) => {
+        props.setContact({ ...props.contact, [e.target.name]: e.target.value });
+    }
+    return (
+        <div className={styles.field}>
+            <label className={styles.label}>ご希望日時</label>
+            <p className={styles.dateNtime}>
+                <input type="date" name="$date" className="form-control" onChange={handleChange} />
+                <select name="time" className="form-control" required onChange={handleChange}>
+                    <option value="">▼時間を選択</option>
+                    <option value="10:00~10:30">10:00~10:30</option>
+                    <option value="10:30~11:00">10:30~11:00</option>
+                    <option value="11:00~11:30">11:00~11:30</option>
+                    <option value="11:30~12:00">11:30~12:00</option>
+                    <option value="12:00~12:30">12:00~12:30</option>
+                    <option value="13:30~14:00">13:30~14:00</option>
+                    <option value="14:00~14:30">14:00~14:30</option>
+                    <option value="14:30~15:00">14:30~15:00</option>
+                    <option value="15:00~15:30">15:00~15:30</option>
+                    <option value="15:30~16:00">15:30~16:00</option>
+                    <option value="16:00~16:30">16:00~16:30</option>
+                    <option value="16:30~17:00">16:30~17:00</option>
+                    <option value="17:00~17:30">17:00~17:30</option>
+                    <option value="17:30~18:00">17:30~18:00</option>
+                </select>
+            </p>
+        </div>
+    );
+}
 
 export default function Form() {
     //ステートフック
@@ -148,29 +187,8 @@ export default function Form() {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.field}>
-                            <label className={styles.label}>ご希望日時</label>
-                            <p className={styles.dateNtime}>
-                                <input type="date" name="$date" className="form-control" onChange={handleChange} />
-                                <select name="$time" className="form-control" required onChange={handleChange}>
-                                    <option value="">▼時間を選択</option>
-                                    <option value="10:00~10:30">10:00~10:30</option>
-                                    <option value="10:30~11:00">10:30~11:00</option>
-                                    <option value="11:00~11:30">11:00~11:30</option>
-                                    <option value="11:30~12:00">11:30~12:00</option>
-                                    <option value="12:00~12:30">12:00~12:30</option>
-                                    <option value="13:30~14:00">13:30~14:00</option>
-                                    <option value="14:00~14:30">14:00~14:30</option>
-                                    <option value="14:30~15:00">14:30~15:00</option>
-                                    <option value="15:00~15:30">15:00~15:30</option>
-                                    <option value="15:30~16:00">15:30~16:00</option>
-                                    <option value="16:00~16:30">16:00~16:30</option>
-                                    <option value="16:30~17:00">16:30~17:00</option>
-                                    <option value="17:00~17:30">17:00~17:30</option>
-                                    <option value="17:30~18:00">17:30~18:00</option>
-                                </select>
-                            </p>
-                        </div>
+                        <SelectSubject subject={contact.subject} setContact={setContact} contact={contact} />
+
                         <div className={`${styles.field} form-group`}>
                             <label className={styles.label} htmlFor="name"><span className={styles.required}>＊</span>氏名(漢字)</label>
                             <p className={styles.errorMessage}>
