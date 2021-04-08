@@ -208,7 +208,7 @@ export default function Form() {
                             </p>
                         </div>
                         <div className={styles.submitBtn}>
-                            <button type="submit" disabled={!contact.name || !contact.kana || !contact.email || errorMessage.email_confirm !== '' || errorMessage.message !== ''}>入力確認</button>
+                            <button type="submit" disabled={!contact.name || !contact.kana || !contact.email || errorMessage.email_confirm !== '' || errorMessage.message !== ''}>送信</button>
                         </div>
                     </form>
                 </div>
