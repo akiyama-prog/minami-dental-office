@@ -14,6 +14,7 @@
     line-height: 4rem;
     letter-spacing: .3rem;
     font-size: .9rem;
+    font-family: "Hiragino Mincho Pro";
   }
   .officeInfo, .logo{
     position: absolute;
@@ -73,6 +74,7 @@
       letter-spacing: .3rem;
       top: -15%;
       right: 9%;
+      font-family: "Hiragino Mincho Pro";
     }
     .ABOUT{
       border-bottom: solid 1px $main-color;
@@ -106,6 +108,7 @@
 }
 .titleJp{
   color: $main-color;
+  font-family: "Hiragino Mincho Pro";
 }
 .point{
   background: $bg-main-color;
@@ -129,7 +132,7 @@
   .points{
     display: flex;
     justify-content: space-between;
-    width: 58%;
+    width: 60%;
     margin: 3rem auto;
     p{
       color: $letter-color;
@@ -148,6 +151,9 @@
       }
       .smTitle{
         position: relative;
+        p{
+          font-family: "Hiragino Mincho Pro";
+        }
         p:first-child{
           z-index: 20;
           position: absolute;
@@ -190,6 +196,14 @@
     justify-content: space-between;
     width: 58%;
     margin: 3rem auto;
+    img{
+      width: 140px;
+      height: auto;
+    }
+    .typeItem{
+      border-right: 2px solid #c0d7e4;
+      padding-right: 2.5rem;
+    }
   }
   .forBeginner{
     position: relative;
@@ -208,6 +222,7 @@
         font-size: 1.5rem;
         letter-spacing: .5rem;
         margin-bottom: .5rem;
+        font-family: "Hiragino Mincho Pro";
         img{
           width: 1.5rem;
           vertical-align: middle;

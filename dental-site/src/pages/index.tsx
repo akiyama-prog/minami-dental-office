@@ -80,20 +80,20 @@ export default function Home() {
           <img src="/ttl-deco.png" className={styles.ttlDeco} />
           <p className={styles.titleJp}>矯正の種類</p>
           <div className={styles.types}>
-            <div>
-              <img src="" alt="表面矯正" />
+            <div className={styles.typeItem}>
+              <img src="/ico_type01.png" alt="表面矯正" />
               <p>表面矯正</p>
             </div>
-            <div>
-              <img src="" alt="裏側矯正" />
+            <div className={styles.typeItem}>
+              <img src="/ico_type02.png" alt="裏側矯正" />
               <p>裏側矯正</p>
             </div>
-            <div>
-              <img src="" alt="小児矯正" />
+            <div className={styles.typeItem}>
+              <img src="/ico_type03.png" alt="小児矯正" />
               <p>小児矯正</p>
             </div>
             <div>
-              <img src="" alt="マウスピース矯正" />
+              <img src="/ico_type04.png" alt="マウスピース矯正" />
               <p>マウスピース矯正</p>
             </div>
           </div>
