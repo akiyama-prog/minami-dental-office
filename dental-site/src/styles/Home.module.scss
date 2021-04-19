@@ -1,9 +1,17 @@
 @import './globals.scss';
 
 //アイキャッチ
+
+@media screen and (max-width:768px){
+  .logo{
+    width:50%;
+    padding: 1rem;
+    padding-left: .5rem;
+  }
+}
 .eyecache{
   position: relative;
-  .bgImg{
+  .bgImg img{
     width: 100%;
     height: auto;
   }
@@ -31,10 +39,12 @@
       font-size: .8rem;
     }
   }
-  .logo{
-    bottom: -2rem;
-    left: 3.5rem;
-    width: 20%;
+  @media screen and (min-width:769px){
+    .logo{
+      bottom: -2rem;
+      left: 3.5rem;
+      width: 20%;
+    }
   }
   p{
     margin: 0;
@@ -50,6 +60,14 @@
     margin-left: 1rem;
   }
 }
+
+@media screen and (max-width:768px){
+  .eyecache{
+    .pcInfo{
+      display: none;
+    }
+  }
+}
 //当院について
 .about{
   display:flex;
@@ -61,7 +79,6 @@
     padding-top: 2rem;
     padding-right: 2rem;
     .jpAbout,.ABOUT,.item1{
-      position: absolute;
       color: $main-color;
     }
     .item1{

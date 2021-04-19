@@ -5,24 +5,36 @@ import Head from '../../components/Head'
 import Info from '../../components/Info'
 import Link from 'next/link'
 import { info } from 'console'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Home() {
+  const isPC: boolean = useMediaQuery({ query: '(min-width: 769px)' })
+  const isMobile: boolean = useMediaQuery({ query: '(max-width: 768px)' })
   return (
     <div className={styles.container}>
       <Head title={'みなみ矯正歯科'}></Head>
       <main>
+        {isMobile && (
+          <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+        )}
         <div className={styles.eyecache}>
-          <img className={styles.bgImg} src="/img_main.jpg" alt="医院内の写真" />
-          <div className={styles.officeInfo}>
-            <Info></Info>
-            <Link href="/form"><a className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
+          <div className={styles.bgImg}>
+            <img src="/img_main.jpg" alt="医院内の写真" />
           </div>
+          {isPC && (
+            <div className={styles.officeInfo}>
+              <Info></Info>
+              <Link href="/form"><a className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
+            </div>
+          )}
           <p className={styles.explaine}>
             治療期間も快適にお過ごしいただきたいから<br />
             患者様ひとりひとりに合った<br />
             最適な治療法をご提案
           </p>
-          <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+          {isPC && (
+            <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+          )}
         </div>
 
         <div className={styles.about}>
