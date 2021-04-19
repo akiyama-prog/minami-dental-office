@@ -196,6 +196,14 @@
     justify-content: space-between;
     width: 58%;
     margin: 3rem auto;
+    img{
+      width: 140px;
+      height: auto;
+    }
+    .typeItem{
+      border-right: 2px solid #c0d7e4;
+      padding-right: 2.5rem;
+    }
   }
   .forBeginner{
     position: relative;
