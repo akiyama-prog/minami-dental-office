@@ -8,6 +8,25 @@
     padding: 1rem;
     padding-left: .5rem;
   }
+  .spHeader{
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    .infoItem{
+      margin-top: 23px;
+    }
+  }
+  .telLink{
+    margin-right: 1px;
+    i{
+      padding: 0;
+    }
+  }
+  .telLink, .formLink{
+    color: white;
+    padding: 1.5rem;
+    background: $main-color;
+  }
 }
 .eyecache{
   position: relative;
@@ -49,7 +68,7 @@
   p{
     margin: 0;
   }
-  .form{
+  .formLink{
     color: inherit;
     text-decoration: none;
     display: flex;
@@ -79,6 +98,7 @@
     padding-top: 2rem;
     padding-right: 2rem;
     .jpAbout,.ABOUT,.item1{
+      position: absolute;
       color: $main-color;
     }
     .item1{

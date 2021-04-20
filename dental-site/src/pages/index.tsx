@@ -15,8 +15,15 @@ export default function Home() {
       <Head title={'みなみ矯正歯科'}></Head>
       <main>
         {isMobile && (
-          <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+          <div className={styles.spHeader}>
+            <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+            <div className={styles.infoItem}>
+              <a className={styles.telLink} href="tel:05201234567"><i className="fas fa-phone fa-rotate-90"></i></a>
+              <Link href="/form"><a className={styles.formLink}><i className="fas fa-envelope"></i></a></Link>
+            </div>
+          </div>
         )}
+
         <div className={styles.eyecache}>
           <div className={styles.bgImg}>
             <img src="/img_main.jpg" alt="医院内の写真" />
@@ -24,7 +31,7 @@ export default function Home() {
           {isPC && (
             <div className={styles.officeInfo}>
               <Info></Info>
-              <Link href="/form"><a className={styles.form}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
+              <Link href="/form"><a className={styles.formLink}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
             </div>
           )}
           <p className={styles.explaine}>
