@@ -25,22 +25,29 @@ export default function Home() {
         )}
 
         <div className={styles.eyecache}>
-          <div className={styles.bgImg}>
-            <img src="/img_main.jpg" alt="医院内の写真" />
-          </div>
           {isPC && (
-            <div className={styles.officeInfo}>
-              <Info></Info>
-              <Link href="/form"><a className={styles.formLink}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
+            <div>
+              <div className={styles.bgImg}>
+                <img src="/img_main.jpg" alt="医院内の写真" />
+              </div>
+              <div className={styles.officeInfo}>
+                <Info></Info>
+                <Link href="/form"><a className={styles.formLink}><i className="fas fa-envelope"></i>　お問い合わせ</a></Link>
+              </div>
+              <p className={styles.explaine}>
+                治療期間も快適にお過ごしいただきたいから<br />
+                患者様ひとりひとりに合った<br />
+                最適な治療法をご提案
+              </p>
+              <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
             </div>
           )}
-          <p className={styles.explaine}>
-            治療期間も快適にお過ごしいただきたいから<br />
+          {isMobile && (
+            <p className={styles.explaine}>
+              治療期間も快適に<br />お過ごしいただきたいから<br />
             患者様ひとりひとりに合った<br />
             最適な治療法をご提案
-          </p>
-          {isPC && (
-            <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+            </p>
           )}
         </div>
 
