@@ -1,7 +1,6 @@
 @import './globals.scss';
 
-//アイキャッチ
-
+//スマホヘッダー
 @media screen and (max-width:768px){//SP
   .logo{
     width:50%;
@@ -28,6 +27,7 @@
     background: $main-color;
   }
 }
+//アイキャッチ
 @media screen and (max-width:768px){//SP
   .eyecache{
     background-image: url("../../public/img_main.jpg");
@@ -39,6 +39,15 @@
 }
 .eyecache{
   position: relative;
+  .officeInfo, .logo{
+    position: absolute;
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+  p{
+    margin: 0;
+  }
   .explaine{
     position: absolute;
     letter-spacing: .3rem;
@@ -55,41 +64,20 @@
       width: 100%;
       height: auto;
     }
-  }
-  @media screen and (max-width:768px){//SP
-    .explaine{
-      position: absolute;
-      top: 20%;
-      right: 5%;
-      line-height: 2rem;
-      font-size: .7rem;
+    .officeInfo{
+      top: -.5rem;
+      right: -.5rem;
+      color:$main-color;
+      display: flex;
+      div p:nth-child(2){
+        font-size: .8rem;
+      }
     }
-  }
-  .officeInfo, .logo{
-    position: absolute;
-    background: white;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-  }
-  .officeInfo{
-    top: -.5rem;
-    right: -.5rem;
-    color:$main-color;
-    display: flex;
-    div p:nth-child(2){
-      font-size: .8rem;
-    }
-  }
-  @media screen and (min-width:769px){//PC
     .logo{
       bottom: -2rem;
       left: 3.5rem;
       width: 20%;
     }
-  }
-  p{
-    margin: 0;
-  }
   .formLink{
     color: inherit;
     text-decoration: none;
@@ -99,6 +87,16 @@
     border: 1px solid $main-color;
     padding: 1rem 2rem;
     margin-left: 1rem;
+  }
+  }
+  @media screen and (max-width:768px){//SP
+    .explaine{
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      line-height: 2rem;
+      font-size: .7rem;
+    }
   }
 }
 //当院について
