@@ -203,19 +203,31 @@
     }
   }
 }
-//3つのポイント
+/** 3つのポイント **/
 .titelEn{
   color: $main-color;
-  font-size: 2rem;
   letter-spacing: .2rem;
   margin: 0;
-}
-.ttlDeco{
-  width: 3rem;
 }
 .titleJp{
   color: $main-color;
   font-family: "Hiragino Mincho Pro";
+}
+@media screen and (min-width:769px){//PC
+  .titelEn{
+    font-size: 2rem;
+  }
+  .ttlDeco{
+    width: 3rem;
+  }
+}
+@media screen and (max-width:768px){//SP
+  .titelEn{
+    font-size: 1.5rem;
+  }
+  .ttlDeco{
+    width: 1.5rem;
+  }
 }
 .point{
   background: $bg-main-color;
@@ -235,7 +247,37 @@
     left: -2%;
     bottom: -17%;
   }
-
+  @media screen and (min-width:769px){//PC
+    .item2r,.item2l{
+      position: absolute;
+      width: 20%;
+      height: auto;
+    }
+    .item2r{
+      right: -2%;
+      top: -14%;
+    }
+    .item2l{
+      left: -2%;
+      bottom: -17%;
+    }
+  }
+  @media screen and (max-width:768px){//SP
+    .item2r,.item2l{
+      position: absolute;
+      width: 20%;
+      height: auto;
+    }
+    .item2r{
+      right: -18%;
+      top: -6%;
+      width: 40%;
+    }
+    .item2l{
+      left: -2%;
+      bottom: -17%;
+    }
+  }
   .points{
     display: flex;
     justify-content: space-between;
