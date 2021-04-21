@@ -144,10 +144,18 @@ export default function Home() {
               <img src="/ico_type03.png" alt="小児矯正" />
               <p>小児矯正</p>
             </div>
-            <div>
-              <img src="/ico_type04.png" alt="マウスピース矯正" />
-              <p>マウスピース矯正</p>
-            </div>
+            {isPC && (
+              <div>
+                <img src="/ico_type04.png" alt="マウスピース矯正" />
+                <p>マウスピース矯正</p>
+              </div>
+            )}
+            {isMobile && (
+              <div className={styles.typeItem}>
+                <img src="/ico_type04.png" alt="マウスピース矯正" />
+                <p>マウスピース矯正</p>
+              </div>
+            )}
           </div>
           <div className={styles.forBeginner}>
             <img src="/bg_fukidashi.png" alt="吹き出し" className={styles.bgFukidashi} />

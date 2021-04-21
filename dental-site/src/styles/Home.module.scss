@@ -364,22 +364,37 @@
   }
 }
 
-//矯正の種類
+/** 矯正の種類 **/
 .type{
   padding: 5% 0;
   text-align: center;
   .types{
     display: flex;
     justify-content: space-between;
-    width: 58%;
     margin: 3rem auto;
     img{
-      width: 140px;
       height: auto;
+      width: 140px;
     }
-    .typeItem{
-      border-right: 2px solid #c0d7e4;
-      padding-right: 2.5rem;
+  }
+  @media screen and (min-width:769px){//PC
+    .types{
+      display: flex;
+      justify-content: space-between;
+      width: 58%;
+      .typeItem{
+        border-right: 2px solid #c0d7e4;
+        padding-right: 2.5rem;
+      }
+    }
+  }
+  @media screen and (max-width:768px){//SP
+    .types{
+      flex-wrap: wrap;
+      width: 100%;
+      .typeItem{
+        margin: 0 auto;
+      }
     }
   }
   .forBeginner{
