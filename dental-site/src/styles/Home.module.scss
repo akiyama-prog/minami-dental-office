@@ -101,7 +101,6 @@
 }
 //当院について
 .about{
-  display:flex;
   padding: 10% 0 6% 0;
   .title{
     width: 30%;
@@ -113,23 +112,12 @@
       position: absolute;
       color: $main-color;
     }
-    .item1{
-      top: 15%;
-      right: 8%;
-    }
     .jpAbout{
-      writing-mode: vertical-rl;
-      font-size: 1.5rem;
       letter-spacing: .3rem;
-      top: -15%;
-      right: 9%;
       font-family: "Hiragino Mincho Pro";
     }
     .ABOUT{
       border-bottom: solid 1px $main-color;
-      line-height: 2.5rem;
-      top: 32%;
-      right: 13%;
     }
   }
   .describe{
@@ -143,6 +131,60 @@
     width: 40%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+  }
+}
+@media screen and (min-width:769px){//PC
+  .about{
+    display:flex;
+    .title{
+      width: 30%;
+      position: relative;
+      text-align: right;
+      padding-top: 2rem;
+      padding-right: 2rem;
+      .item1{
+        top: 15%;
+        right: 8%;
+      }
+      .jpAbout{
+        writing-mode: vertical-rl;
+        font-size: 1.5rem;
+        top: -15%;
+        right: 9%;
+      }
+      .ABOUT{
+        top: 32%;
+        right: 13%;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width:768px){//SP
+  .about{
+    .title{
+      width: 30%;
+      position: relative;
+      text-align: right;
+      padding-top: 2rem;
+      padding-right: 2rem;
+      .item1{
+        top: 110%;
+        left: 185%;
+        width: 80%;
+      }
+      .jpAbout{
+        top: 180%;
+        right: -130%;
+        font-size: 1rem;
+      }
+      .ABOUT{
+        top: 32%;
+        right: -90%;
+        font-size: .7rem;
+        line-height: 2rem;
+      }
+    }
   }
 }
 //3つのポイント
