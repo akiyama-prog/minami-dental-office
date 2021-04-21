@@ -121,14 +121,10 @@
     }
   }
   .describe{
-    width: 30%;
     color: $letter-color;
-    margin: 5% 3%;
-    font-size: .8rem;
     line-height: 1.5rem;
   }
   .staffPhoto{
-    width: 40%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
   }
@@ -158,6 +154,14 @@
         line-height: 2.5rem;
       }
     }
+    .describe{
+      width: 30%;
+      margin: 5% 3%;
+      font-size: .8rem;
+    }
+    .staffPhoto{
+      width: 40%;
+    }
   }
 }
 @media screen and (max-width:768px){//SP
@@ -184,6 +188,18 @@
         font-size: .7rem;
         line-height: 2rem;
       }
+    }
+    .describe, .staffPhoto{
+      margin-left: 10%;
+      margin-top: 20%;
+    }
+    .describe{
+      width: 80%;
+      margin-top: 5%;
+      font-size: .7rem;
+    }
+    .staffPhoto{
+      width: 90%;
     }
   }
 }
