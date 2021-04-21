@@ -85,7 +85,12 @@ export default function Home() {
           <p className={styles.titleJp}>当院の３つのポイント</p>
           <div className={styles.points}>
             <div className={styles.pointItem}>
-              <img src="/img_point01.png" alt="院内写真" className={styles.insidePhoto} />
+              {isPC && (
+                <img src="/img_point01_sp.png" alt="院内写真" className={styles.insidePhoto} />
+              )}
+              {isMobile && (
+                <img src="/img_point01.png" alt="院内写真" className={styles.insidePhoto} />
+              )}
               <div className={styles.smTitle}>
                 <p><span className={styles.pointNumber}>point1</span> 清潔な院内</p>
                 <img src="/ttl-bg.png" className={styles.ttlBg1} />
@@ -93,7 +98,12 @@ export default function Home() {
               <p className={styles.describe}>診療室だけでなく、受付・待合・洗面スペース・お手洗いなども清潔感を大切にし、患者様に気持ちよく通っていただけるよう心がけています。</p>
             </div>
             <div className={styles.pointItem}>
-              <img src="/img_point02.png" alt="治療の様子" className={styles.insidePhoto} />
+              {isPC && (
+                <img src="/img_point02_sp.png" alt="治療の様子" className={styles.insidePhoto} />
+              )}
+              {isMobile && (
+                <img src="/img_point02.png" alt="治療の様子" className={styles.insidePhoto} />
+              )}
               <div className={styles.smTitle}>
                 <p><span className={styles.pointNumber}>point2</span> 丁寧なカウンセリング</p>
                 <img src="/ttl-bg.png" className={styles.ttlBg2} />
@@ -101,7 +111,12 @@ export default function Home() {
               <p className={styles.describe}>毎回、治療の経過の説明や相談時間を設け、疑問や悩みがある場合も相談しやすい環境を整えております。どんな小さな悩みでもお気軽にご相談ください。</p>
             </div>
             <div className={styles.pointItem}>
-              <img src="/img_point03.png" alt="ユニット写真" className={styles.insidePhoto} />
+              {isPC && (
+                <img src="/img_point03_sp.png" alt="ユニット写真" className={styles.insidePhoto} />
+              )}
+              {isMobile && (
+                <img src="/img_point03.png" alt="ユニット写真" className={styles.insidePhoto} />
+              )}
               <div className={styles.smTitle}>
                 <p><span className={styles.pointNumber}>point3</span> 半個室の診療室</p>
                 <img src="/ttl-bg.png" className={styles.ttlBg3} />

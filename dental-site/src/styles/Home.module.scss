@@ -229,6 +229,7 @@
     width: 1.5rem;
   }
 }
+
 .point{
   background: $bg-main-color;
   padding: 5% 0;
@@ -239,20 +240,7 @@
     width: 20%;
     height: auto;
   }
-  .item2r{
-    right: -2%;
-    top: -14%;
-  }
-  .item2l{
-    left: -2%;
-    bottom: -17%;
-  }
   @media screen and (min-width:769px){//PC
-    .item2r,.item2l{
-      position: absolute;
-      width: 20%;
-      height: auto;
-    }
     .item2r{
       right: -2%;
       top: -14%;
@@ -263,34 +251,24 @@
     }
   }
   @media screen and (max-width:768px){//SP
-    .item2r,.item2l{
-      position: absolute;
-      width: 20%;
-      height: auto;
-    }
     .item2r{
       right: -18%;
       top: -6%;
       width: 40%;
     }
     .item2l{
-      left: -2%;
-      bottom: -17%;
+      left: -15%;
+      bottom: -5%;
+      width: 40%;
     }
   }
+
   .points{
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
     margin: 3rem auto;
     p{
       color: $letter-color;
     }
     .pointItem{
-      width: 30%;
-      .insidePhoto{
-        width: 80%;
-      }
       .describe{
         margin-top: 3rem;
         width: 100%;
@@ -321,15 +299,65 @@
         }
         .ttlBg1{
           top: 1.4rem;
-          left: 2.8rem;
         }
         .ttlBg2{
           top: 1.4rem;
-          left: -0.1rem;
         }
         .ttlBg3{
           top: 1.4rem;
-          left: 1.5rem;
+        }
+      }
+    }
+  }
+  @media screen and (min-width:769px){//PC
+    .points{
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      p{
+        color: $letter-color;
+      }
+      .pointItem{
+        width: 30%;
+        .insidePhoto{
+          width: 80%;
+        }
+        .smTitle{
+          .ttlBg1{
+            left: 2.8rem;
+          }
+          .ttlBg2{
+            left: -0.1rem;
+          }
+          .ttlBg3{
+            left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width:768px){//SP
+    .points{
+      width: 90%;
+      p{
+        color: $letter-color;
+      }
+      .pointItem{
+        width: 80%;
+        margin: 0 auto;
+        .insidePhoto{
+          width: 100%;
+        }
+        .smTitle{
+          .ttlBg1{
+            left: 4.2rem;
+          }
+          .ttlBg2{
+            left: 1.5rem;
+          }
+          .ttlBg3{
+            left: 3rem;
+          }
         }
       }
     }
