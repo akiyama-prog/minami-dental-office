@@ -178,7 +178,12 @@ export default function Home() {
                 <img src="/item_arrow.png" /><p>どんな治療になる？どれくらい痛い？</p><p className={styles.
                   etc}>etc…</p>
               </div>
-              <p>歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
+              {isPC && (
+                <p >歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
+              )}
+              {isMobile && (
+                <p className={styles.spAsk}>歯列矯正は治療法に納得してから始めるのがベストです。<br />何でもお気軽にご相談ください！</p>
+              )}
             </div>
           </div>
         </div>

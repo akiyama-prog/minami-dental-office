@@ -430,9 +430,6 @@
         background: white;
         border-radius: 3rem;
         display: table;
-        margin: 1rem auto;
-        width: 75%;
-        padding: .5rem 1.5rem;
         vertical-align: middle;
         p{
           display: table-cell;
@@ -470,27 +467,9 @@
           font-size: 1.2rem;
         }
         .worry{
-          color: black;
-          background: white;
-          border-radius: 3rem;
-          display: table;
           margin: 1rem auto;
           width: 75%;
           padding: .5rem 1.5rem;
-          vertical-align: middle;
-          p{
-            display: table-cell;
-            text-align: center;
-          }
-          img{
-            text-align: left;
-            height: 1rem;
-            display: table-cell;
-          }
-          .etc{
-            display: table-cell;
-            text-align: right;
-          }
         }
       }
     }
@@ -498,8 +477,11 @@
   @media screen and (max-width:768px){//SP
     .forBeginner{
       width: 90%;
+      .bgFukidashi{
+        margin-bottom: 5%;
+      }
       .contents{
-        left:0;
+        left:5%;
         .title{
           font-size: .8rem;
           letter-spacing: .2rem;
@@ -516,28 +498,22 @@
           margin-top: 1rem;
         }
         .worry{
-          color: black;
-          background: white;
-          border-radius: 3rem;
-          display: table;
-          margin: 1rem auto;
-          width: 75%;
-          padding: .5rem 1.5rem;
-          vertical-align: middle;
+          margin: .7rem auto;
+          width: 100%;
+          padding: .4rem 1rem;
           p{
-            display: table-cell;
-            text-align: center;
+            font-size: .8rem;
           }
           img{
-            text-align: left;
-            height: 1rem;
-            display: table-cell;
-          }
-          .etc{
-            display: table-cell;
-            text-align: right;
+            width: 50%;
+            height: auto;
           }
         }
+      }
+      .spAsk{
+          font-size: .7rem;
+          letter-spacing: .1rem;
+          line-height: 1.5rem;
       }
     }
   }
