@@ -519,7 +519,7 @@
   }
 }
 
-//footer
+/** footer **/
 .footer{
   background: $bg-main-color;
   color: $main-color;
@@ -528,9 +528,6 @@
   }
   .info{
     padding: 3% 0;
-    display: flex;
-    justify-content: space-between;
-    width: 58%;
     margin: 0 auto;
     font-size: .9rem;
     line-height: 2rem;
@@ -548,6 +545,9 @@
     }
     .formInfo{
       margin: 1rem 0;
+      .tel{
+        color: $main-color;
+      }
     }
     .form{
       color: inherit;
@@ -558,6 +558,7 @@
         margin-left: .3rem;
       }
     }
+
     .officeHours table{
       background: white;
       border-radius: 1rem;
@@ -584,11 +585,32 @@
       display: flex;
       justify-content: space-between;
     }
-    .map{
-      width: 50%;
+  }
+  @media screen and (min-width:769px){//PC
+    .info{
+      display: flex;
+      justify-content: space-between;
+      width: 58%;
+      .map{
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width:768px){//SP
+    .info{
+      width: 85%;
+      .form{
+        .borderBottom{
+          font-size: .8rem;
+        }
+      }
+      .map{
+        width: 100%;
+      }
     }
   }
 }
+
 .small{
   text-align: center;
   margin: 1rem;
