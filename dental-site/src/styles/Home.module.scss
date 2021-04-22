@@ -364,28 +364,43 @@
   }
 }
 
-//矯正の種類
+/** 矯正の種類 **/
 .type{
   padding: 5% 0;
   text-align: center;
   .types{
     display: flex;
     justify-content: space-between;
-    width: 58%;
     margin: 3rem auto;
     img{
-      width: 140px;
       height: auto;
-    }
-    .typeItem{
-      border-right: 2px solid #c0d7e4;
-      padding-right: 2.5rem;
+      width: 140px;
     }
   }
+  @media screen and (min-width:769px){//PC
+    .types{
+      display: flex;
+      justify-content: space-between;
+      width: 58%;
+      .typeItem{
+        border-right: 2px solid #c0d7e4;
+        padding-right: 2.5rem;
+      }
+    }
+  }
+  @media screen and (max-width:768px){//SP
+    .types{
+      flex-wrap: wrap;
+      width: 100%;
+      .typeItem{
+        margin: 0 auto;
+      }
+    }
+  }
+
   .forBeginner{
     position: relative;
     margin: 0 auto;
-    width: 58%;
     .bgFukidashi{
       width: 100%;
     }
@@ -394,25 +409,18 @@
       color: $main-color;
       text-align: center;
       top: 3rem;
-      left: 10%;
       .title{
-        font-size: 1.5rem;
-        letter-spacing: .5rem;
         margin-bottom: .5rem;
         font-family: "Hiragino Mincho Pro";
         img{
-          width: 1.5rem;
           vertical-align: middle;
         }
         .titleEn{
-          font-size: .8rem;
           letter-spacing: .1rem;
         }
       }
       .counseling{
-        letter-spacing: .2rem;
         vertical-align: middle;
-        font-size: 1.2rem;
         img{
           height: 1rem;
         }
@@ -422,9 +430,6 @@
         background: white;
         border-radius: 3rem;
         display: table;
-        margin: 1rem auto;
-        width: 75%;
-        padding: .5rem 1.5rem;
         vertical-align: middle;
         p{
           display: table-cell;
@@ -439,6 +444,76 @@
           display: table-cell;
           text-align: right;
         }
+      }
+    }
+  }
+  @media screen and (min-width:769px){//PC
+    .forBeginner{
+      width: 58%;
+      .contents{
+        left: 10%;
+        .title{
+          font-size: 1.5rem;
+          letter-spacing: .5rem;
+          img{
+            width: 1.5rem;
+          }
+          .titleEn{
+            font-size: .8rem;
+          }
+        }
+        .counseling{
+          letter-spacing: .2rem;
+          font-size: 1.2rem;
+        }
+        .worry{
+          margin: 1rem auto;
+          width: 75%;
+          padding: .5rem 1.5rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:768px){//SP
+    .forBeginner{
+      width: 90%;
+      .bgFukidashi{
+        margin-bottom: 5%;
+      }
+      .contents{
+        left:5%;
+        .title{
+          font-size: .8rem;
+          letter-spacing: .2rem;
+          img{
+            width: .8rem;
+          }
+          .titleEn{
+            font-size: .5rem;
+          }
+        }
+        .counseling{
+          letter-spacing: .1rem;
+          font-size: .8em;
+          margin-top: 1rem;
+        }
+        .worry{
+          margin: .7rem auto;
+          width: 100%;
+          padding: .4rem 1rem;
+          p{
+            font-size: .8rem;
+          }
+          img{
+            width: 50%;
+            height: auto;
+          }
+        }
+      }
+      .spAsk{
+          font-size: .7rem;
+          letter-spacing: .1rem;
+          line-height: 1.5rem;
       }
     }
   }

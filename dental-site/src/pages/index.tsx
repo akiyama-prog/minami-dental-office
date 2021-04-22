@@ -144,13 +144,26 @@ export default function Home() {
               <img src="/ico_type03.png" alt="小児矯正" />
               <p>小児矯正</p>
             </div>
-            <div>
-              <img src="/ico_type04.png" alt="マウスピース矯正" />
-              <p>マウスピース矯正</p>
-            </div>
+            {isPC && (
+              <div>
+                <img src="/ico_type04.png" alt="マウスピース矯正" />
+                <p>マウスピース矯正</p>
+              </div>
+            )}
+            {isMobile && (
+              <div className={styles.typeItem}>
+                <img src="/ico_type04.png" alt="マウスピース矯正" />
+                <p>マウスピース矯正</p>
+              </div>
+            )}
           </div>
           <div className={styles.forBeginner}>
-            <img src="/bg_fukidashi.png" alt="吹き出し" className={styles.bgFukidashi} />
+            {isPC && (
+              <img src="/bg_fukidashi.png" alt="吹き出し" className={styles.bgFukidashi} />
+            )}
+            {isMobile && (
+              <img src="/bg_fukidashi_sp.png" alt="吹き出し" className={styles.bgFukidashi} />
+            )}
             <div className={styles.contents}>
               <p className={styles.title}><img src="ico_beginner.png" alt="初心者マーク" /> 初めての方へ<br />
                 <span className={styles.titleEn}>for beginner</span></p>
@@ -165,7 +178,12 @@ export default function Home() {
                 <img src="/item_arrow.png" /><p>どんな治療になる？どれくらい痛い？</p><p className={styles.
                   etc}>etc…</p>
               </div>
-              <p>歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
+              {isPC && (
+                <p >歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
+              )}
+              {isMobile && (
+                <p className={styles.spAsk}>歯列矯正は治療法に納得してから始めるのがベストです。<br />何でもお気軽にご相談ください！</p>
+              )}
             </div>
           </div>
         </div>
