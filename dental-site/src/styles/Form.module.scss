@@ -1,15 +1,16 @@
 @import './globals.scss';
 
+
 .header{
     background: $bg-main-color;
 }
+
 .info{
     display: flex;
     justify-content: space-between;
     width: 90%;
     height: auto;
     margin: 0 auto;
-    padding: 1.5rem 0;
     color: $main-color;
 
     div p:nth-child(2){
@@ -20,10 +21,82 @@
       }
 }
 .logo{
-    width: 20%;
     align-items: center;
     img{
         width: 100%;
+    }
+}
+@media screen and (min-width:769px){//PC
+    .infoItem{
+        display: none;
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1.5rem 0;
+        color: $main-color;
+
+        div p:nth-child(2){
+            font-size: .8rem;
+            margin: 0;
+            margin-top: .1rem;
+
+          }
+    }
+    .logo{
+        width: 20%;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .isPC{
+        display: none;
+    }
+    .header{
+        height: 69px;
+    }
+    .infoItem{
+        margin-top: 23px;
+      }
+      .telLink{
+        margin-right: 1px;
+        i{
+          padding: 0;
+        }
+      }
+      .telLink, .formLink{
+        color: white;
+        padding: 1.5rem;
+        background: $main-color;
+      }
+      .info{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        color: $main-color;
+
+        div p:nth-child(2){
+            font-size: .8rem;
+            margin: 0;
+            margin-top: .1rem;
+
+          }
+    }
+    .logo{
+        width: 50%;
+        align-items: center;
+        padding: 1rem;
+        img{
+            width: 100%;
+        }
     }
 }
 //フォームページ

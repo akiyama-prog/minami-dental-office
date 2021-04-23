@@ -4,7 +4,6 @@ import Footer from '../../components/Footer'
 import Head from '../../components/Head'
 import Info from '../../components/Info'
 import Link from 'next/link'
-import { info } from 'console'
 import { useMediaQuery } from 'react-responsive'
 
 export default function Home() {
