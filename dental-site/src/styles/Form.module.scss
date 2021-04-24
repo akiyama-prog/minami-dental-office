@@ -108,15 +108,12 @@
         text-align: center;
         .titelEn{
             color: $main-color;
-            font-size: 2rem;
             letter-spacing: .2rem;
             margin: 0;
           }
-          .ttlDeco{
-            width: 3rem;
-          }
           .titleJp{
             color: $main-color;
+            font-family: "Hiragino Mincho Pro";
           }
     }
     .attention{
@@ -128,6 +125,50 @@
     }
     .required{
         color: red;
+    }
+}
+@media screen and (min-width:769px){//PC
+    .contact{
+        .title{
+            .titelEn{
+                font-size: 2rem;
+              }
+              .ttlDeco{
+                width: 3rem;
+              }
+        }
+        .attention{
+            color: $main-color;
+            border: 1px solid $main-color;
+            padding: .5rem 1rem;
+            width: 26%;
+            margin-left: 5%;
+        }
+        .required{
+            color: red;
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .contact{
+        .title{
+            .titelEn{
+                font-size: 1.5rem;
+              }
+              .ttlDeco{
+                width: 1.5rem;
+              }
+        }
+        .attention{
+            color: $main-color;
+            border: 1px solid $main-color;
+            padding: .5rem 1rem;
+            width: 26%;
+            margin-left: 5%;
+        }
+        .required{
+            color: red;
+        }
     }
 }
 form{
