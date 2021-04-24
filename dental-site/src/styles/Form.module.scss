@@ -157,28 +157,16 @@
         }
     }
 }
+
 form{
-    .field,.radioButton,.dateNtime{
-        display: flex;
-    }
-    .email{
-        width: 200%;
-    }
     .textarea{
         height: 10rem;
-        width: 193%;
-    }
-    .label{
-        margin-right: 2rem;
-        width: 30%;
-        text-align: right;
     }
     .radioButton div:first-child,.dateNtime input:first-child{
         margin-right: 1rem;
     }
     .submitBtn{
         text-align: center;
-        margin-top: 2.5rem;
         button{
             background-color: $main-color;
             color: white;
@@ -223,6 +211,40 @@ form{
 }
 .errorMessage{
     color: red;
+}
+@media screen and (min-width:769px){//PC
+    form{
+        .field,.radioButton,.dateNtime{
+            display: flex;
+        }
+        .email{
+            width: 200%;
+        }
+        .textarea{
+            width: 193%;
+        }
+        .label{
+            margin-right: 2rem;
+            width: 30%;
+            text-align: right;
+        }
+        .submitBtn{
+            margin-top: 2.5rem;
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    form{
+        .label, .textarea{
+            width: 100%;
+        }
+        .field{
+            margin-bottom: 1.5rem;
+        }
+        .submitBtn{
+            margin-top: 1.5rem;
+        }
+    }
 }
 //thunxページ
 .thunx{
