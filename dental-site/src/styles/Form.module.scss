@@ -248,19 +248,39 @@ form{
 }
 //thunxページ
 .thunx{
-    margin-top: 3% ;
-    margin-bottom: 7%;
-    margin-left: 18%;
     p{
         color: $letter-color;
+        font-family: "Hiragino Mincho Pro";
     }
     h2{
-        font-size: 1.5rem;
         color: $main-color;
     }
     .hr{
         border-top:1px solid $main-color;
         width:1.5rem;
         margin-left: 0;
+    }
+}
+@media screen and (min-width:769px){//PC
+    .thunx{
+        margin-top: 3% ;
+        margin-bottom: 7%;
+        margin-left: 18%;
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .thunx{
+        margin: 3% auto 7% auto;
+        padding-top: 1rem;
+        width: 80%;
+        p{
+            font-size: .8rem;
+        }
+        h2{
+            font-size: 1.3rem;
+        }
     }
 }
