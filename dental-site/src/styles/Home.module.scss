@@ -282,6 +282,21 @@
         font-size: .9rem;
         line-height: 2rem;
       }
+      .pointNumber{
+        position: relative;
+        &:after{
+          content: "";
+          background: url(/ttl-bg.png) no-repeat;
+          display: inline-block;
+          width: 83px;
+          height: 35px;
+          position: absolute;
+          background-size: 100%;
+          z-index: -1;
+          left: -10px;
+          top: 0;
+        }
+      }
       .smTitle{
         position: relative;
         p{
@@ -409,6 +424,13 @@
     .bgFukidashi{
       width: 100%;
     }
+
+    .innerContent{
+      width: 1000px;
+      margin: 0 auto;
+      background-image: url(/bg_fukidashi.png);
+      background-size: 100%;
+    }
     .contents{
       position: absolute;
       color: $main-color;
@@ -454,9 +476,12 @@
   }
   @media screen and (min-width:769px){//PC
     .forBeginner{
-      width: 58%;
+      .innerContent{
+        height: 490px;
+      }
       .contents{
-        left: 10%;
+        position: relative;
+        padding-top: 2rem;
         .title{
           font-size: 1.5rem;
           letter-spacing: .5rem;
@@ -626,20 +651,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
-.pointNumber{
-  position: relative;
-  &:after{
-    content: "";
-    background: url(/ttl-bg.png) no-repeat;
-    display: inline-block;
-    width: 83px;
-    height: 35px;
-    position: absolute;
-    background-size: 100%;
-    z-index: -1;
-    left: -10px;
-    top: 0;
-  }
-
 }
