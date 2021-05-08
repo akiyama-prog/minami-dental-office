@@ -156,32 +156,31 @@ export default function Home() {
             )}
           </div>
           <div className={styles.forBeginner}>
-            {isPC && (
-              <img src="/bg_fukidashi.png" alt="吹き出し" className={styles.bgFukidashi} />
-            )}
             {isMobile && (
               <img src="/bg_fukidashi_sp.png" alt="吹き出し" className={styles.bgFukidashi} />
             )}
-            <div className={styles.contents}>
-              <p className={styles.title}><img src="ico_beginner.png" alt="初心者マーク" /> 初めての方へ<br />
-                <span className={styles.titleEn}>for beginner</span></p>
-              <p className={styles.counseling}><img src="/item_beginner-l.png" /> 初めての方はまず無料カウンセリングから！<img src="/item_beginner-r.png" /></p>
-              <div className={styles.worry}>
-                <img src="/item_arrow.png" /><p>矯正したいけれど迷ってる…。話だけ聞きたい！</p>
+            <div className={styles.innerContent}>
+              <div className={styles.contents}>
+                <p className={styles.title}><img src="ico_beginner.png" alt="初心者マーク" /> 初めての方へ<br />
+                  <span className={styles.titleEn}>for beginner</span></p>
+                <p className={styles.counseling}><img src="/item_beginner-l.png" /> 初めての方はまず無料カウンセリングから！<img src="/item_beginner-r.png" /></p>
+                <div className={styles.worry}>
+                  <img src="/item_arrow.png" /><p>矯正したいけれど迷ってる…。話だけ聞きたい！</p>
+                </div>
+                <div className={styles.worry}>
+                  <img src="/item_arrow.png" /><p>費用がどれくらいかかるか分からなくて不安…。</p>
+                </div>
+                <div className={styles.worry}>
+                  <img src="/item_arrow.png" /><p>どんな治療になる？どれくらい痛い？</p><p className={styles.
+                    etc}>etc…</p>
+                </div>
+                {isPC && (
+                  <p >歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
+                )}
+                {isMobile && (
+                  <p className={styles.spAsk}>歯列矯正は治療法に納得してから始めるのがベストです。<br />何でもお気軽にご相談ください！</p>
+                )}
               </div>
-              <div className={styles.worry}>
-                <img src="/item_arrow.png" /><p>費用がどれくらいかかるか分からなくて不安…。</p>
-              </div>
-              <div className={styles.worry}>
-                <img src="/item_arrow.png" /><p>どんな治療になる？どれくらい痛い？</p><p className={styles.
-                  etc}>etc…</p>
-              </div>
-              {isPC && (
-                <p >歯列矯正は治療法に納得してから始めるのがベストです。何でもお気軽にご相談ください！</p>
-              )}
-              {isMobile && (
-                <p className={styles.spAsk}>歯列矯正は治療法に納得してから始めるのがベストです。<br />何でもお気軽にご相談ください！</p>
-              )}
             </div>
           </div>
         </div>
