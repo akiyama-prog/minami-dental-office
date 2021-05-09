@@ -143,7 +143,7 @@ export default function Home() {
               <p>小児矯正</p>
             </div>
             {isPC && (
-              <div>
+              <div className={styles.typeItemLast}>
                 <img src="/ico_type04.png" alt="マウスピース矯正" />
                 <p>マウスピース矯正</p>
               </div>

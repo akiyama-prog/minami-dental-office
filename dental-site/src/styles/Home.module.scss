@@ -402,9 +402,12 @@
       display: flex;
       justify-content: space-between;
       width: 58%;
+      .typeItem, .typeItemLast{
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
       .typeItem{
         border-right: 2px solid #c0d7e4;
-        padding-right: 2.5rem;
       }
     }
   }
