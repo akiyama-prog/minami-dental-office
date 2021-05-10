@@ -612,6 +612,10 @@
         border-bottom: none;
       }
     }
+    .closedDays{
+      display: flex;
+      justify-content: space-between;
+    }
   }
   @media screen and (min-width:769px){//PC
     .info{
@@ -620,10 +624,6 @@
       width: 58%;
       .map{
         width: 50%;
-      }
-      .closedDays{
-        display: flex;
-        justify-content: space-between;
       }
     }
   }
@@ -640,6 +640,9 @@
       }
       .map{
         width: 100%;
+      }
+      .closedDays{
+        font-size: .8rem;
       }
     }
   }
