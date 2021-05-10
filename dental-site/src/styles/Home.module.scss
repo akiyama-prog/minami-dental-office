@@ -607,10 +607,6 @@
         border-bottom: none;
       }
     }
-    .closedDays{
-      display: flex;
-      justify-content: space-between;
-    }
   }
   @media screen and (min-width:769px){//PC
     .info{
@@ -620,11 +616,18 @@
       .map{
         width: 50%;
       }
+      .closedDays{
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
   @media screen and (max-width:768px){//SP
     .info{
       width: 85%;
+      .tel{
+        font-size: 1.3rem;
+      }
       .form{
         .borderBottom{
           font-size: .8rem;
