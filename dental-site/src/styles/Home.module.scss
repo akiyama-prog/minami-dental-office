@@ -391,7 +391,6 @@
   .types{
     display: flex;
     justify-content: space-between;
-    margin: 3rem auto;
     img{
       height: auto;
       width: 140px;
@@ -399,7 +398,7 @@
   }
   @media screen and (min-width:769px){//PC
     .types{
-      display: flex;
+      margin: 3rem auto;
       justify-content: space-between;
       width: 58%;
       .typeItem, .typeItemLast{
@@ -413,6 +412,7 @@
   }
   @media screen and (max-width:768px){//SP
     .types{
+      margin: 1rem auto;
       flex-wrap: wrap;
       width: 100%;
       .typeItem{
@@ -420,25 +420,17 @@
       }
     }
   }
-
   .forBeginner{
     position: relative;
     margin: 0 auto;
-    .bgFukidashi{
-      width: 100%;
-    }
-
     .innerContent{
-      width: 1000px;
       margin: 0 auto;
-      background-image: url(/bg_fukidashi.png);
       background-size: 100%;
     }
     .contents{
-      position: absolute;
+      position: relative;
       color: $main-color;
       text-align: center;
-      top: 3rem;
       .title{
         margin-bottom: .5rem;
         font-family: "Hiragino Mincho Pro";
@@ -480,11 +472,13 @@
   @media screen and (min-width:769px){//PC
     .forBeginner{
       .innerContent{
+        width: 1000px;
         height: 490px;
+        background-image: url(/bg_fukidashi.png);
       }
       .contents{
-        position: relative;
         padding-top: 2rem;
+        top: 3rem;
         .title{
           font-size: 1.5rem;
           letter-spacing: .5rem;
@@ -510,11 +504,14 @@
   @media screen and (max-width:768px){//SP
     .forBeginner{
       width: 90%;
-      .bgFukidashi{
-        margin-bottom: 5%;
+      .innerContent{
+        width: 100%;
+        margin: 0 auto;
+        background-image: url(/bg-suisai.jpg);
+        background-size: 100%;
       }
       .contents{
-        left:5%;
+        padding: 1rem;
         .title{
           font-size: .8rem;
           letter-spacing: .2rem;
@@ -527,26 +524,27 @@
         }
         .counseling{
           letter-spacing: .1rem;
-          font-size: .8em;
-          margin-top: 1rem;
+          font-size: .7em;
+          margin: 0;
         }
         .worry{
           margin: .7rem auto;
           width: 100%;
           padding: .4rem 1rem;
           p{
-            font-size: .8rem;
+            font-size: .6rem;
           }
           img{
-            width: 50%;
+            width: 40%;
             height: auto;
           }
         }
       }
       .spAsk{
-          font-size: .7rem;
+          font-size: .6rem;
           letter-spacing: .1rem;
-          line-height: 1.5rem;
+          line-height: 1.3rem;
+          margin: 0;
       }
     }
   }

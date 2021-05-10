@@ -156,9 +156,6 @@ export default function Home() {
             )}
           </div>
           <div className={styles.forBeginner}>
-            {isMobile && (
-              <img src="/bg_fukidashi_sp.png" alt="吹き出し" className={styles.bgFukidashi} />
-            )}
             <div className={styles.innerContent}>
               <div className={styles.contents}>
                 <p className={styles.title}><img src="ico_beginner.png" alt="初心者マーク" /> 初めての方へ<br />
