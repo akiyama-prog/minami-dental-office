@@ -90,6 +90,11 @@
     border: 1px solid $main-color;
     padding: 1rem 2rem;
     margin-left: 1rem;
+    &:hover{
+      background-color: $main-color;
+      color: white;
+      transition: all 0.3s;
+    }
   }
   }
   @media screen and (max-width:768px){//SP
