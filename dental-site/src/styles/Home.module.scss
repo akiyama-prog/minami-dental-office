@@ -34,7 +34,7 @@
 @media screen and (max-width:768px){//SP
   .eyecache{
     background-image: url("../../public/img_main.jpg");
-    background-position: right bottom;
+    background-position: right top;
     background-size: 150%;
     background-repeat: no-repeat;
     height: 270px;
@@ -104,7 +104,6 @@
 }
 //当院について
 .about{
-  padding: 10% 0 6% 0;
   .title{
     width: 30%;
     position: relative;
@@ -135,6 +134,7 @@
 @media screen and (min-width:769px){//PC
   .about{
     display:flex;
+    padding: 10% 0 6% 0;
     .title{
       width: 30%;
       position: relative;
