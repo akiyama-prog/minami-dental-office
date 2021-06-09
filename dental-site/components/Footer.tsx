@@ -61,7 +61,7 @@ export default function Footer({ children }) {
                         </div>
                     </div>
                     <div className={styles.map}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6528.85001207716!2d136.91670649715837!3d35.096096920953116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bc714c909a1%3A0x9e51a3cae5d2fd81!2z44CSNDU3LTA4MzMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2X5Yy65p2x5Y-I5YW144Ox55S6!5e0!3m2!1sja!2sjp!4v1616322772605!5m2!1sja!2sjp" style={{ width: "100%", height: "100%", border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6528.85001207716!2d136.91670649715837!3d35.096096920953116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bc714c909a1%3A0x9e51a3cae5d2fd81!2z44CSNDU3LTA4MzMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2X5Yy65p2x5Y-I5YW144Ox55S6!5e0!3m2!1sja!2sjp!4v1616322772605!5m2!1sja!2sjp" style={{ width: "100%", height: "100%", border: 0 }} loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
