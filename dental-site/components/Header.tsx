@@ -2,7 +2,7 @@ import styles from '../src/styles/Form.module.scss'
 import Link from 'next/link'
 import Info from '../components/Info'
 
-export default function Header({ children }) {
+export default function Header({ children = null }) {
     return (
         <header>
             <div className={styles.header}>

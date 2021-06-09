@@ -1,7 +1,7 @@
 import styles from '../src/styles/Home.module.scss'
 import Link from 'next/link'
 
-export default function Footer({ children }) {
+export default function Footer({ children = null }) {
     return (
         <footer>
             <div className={styles.footer}>
