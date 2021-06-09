@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "heroku-postbuild": "npm run-script build"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
