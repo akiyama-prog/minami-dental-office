@@ -1,19 +1,15 @@
-
-$main-color: #28729e;
-$letter-color:#656161;
-$bg-main-color:#b9e7ef29;
-
 .container {
   -webkit-appearance: none;
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  width:100%;
+  width: 100%;
   font-family: 'Quicksand', sans-serif;
   overflow: hidden;
 }
 
-.tel{
+.tel {
   font-size: 1.5rem;
   margin: 0;
 }
+/*# sourceMappingURL=globals.css.map */
