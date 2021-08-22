@@ -3,9 +3,11 @@ $main-color: #28729e;
 $letter-color:#656161;
 $bg-main-color:#b9e7ef29;
 
-.container {
+html{
   -webkit-appearance: none;
   -webkit-text-size-adjust: 100%;
+}
+.container {
   min-height: 100vh;
   margin: 0 auto;
   width:100%;

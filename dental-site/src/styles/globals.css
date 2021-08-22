@@ -1,6 +1,9 @@
-.container {
+html {
   -webkit-appearance: none;
   -webkit-text-size-adjust: 100%;
+}
+
+.container {
   min-height: 100vh;
   margin: 0 auto;
   width: 100%;
