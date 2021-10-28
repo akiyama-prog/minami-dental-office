@@ -9,7 +9,6 @@ import { useMediaQuery } from 'react-responsive'
 export default function Home() {
   const isPC: boolean = useMediaQuery({ query: '(min-width: 769px)' })
   const isMobile: boolean = useMediaQuery({ query: '(max-width: 768px)' })
-  console.log(isPC);
   return (
     <div className={styles.container}>
       <Head title={'みなみ矯正歯科'}></Head>
