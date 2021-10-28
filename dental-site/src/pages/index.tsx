@@ -9,19 +9,22 @@ import { useMediaQuery } from 'react-responsive'
 export default function Home() {
   const isPC: boolean = useMediaQuery({ query: '(min-width: 769px)' })
   const isMobile: boolean = useMediaQuery({ query: '(max-width: 768px)' })
+  console.log(isPC);
   return (
     <div className={styles.container}>
       <Head title={'みなみ矯正歯科'}></Head>
       <main>
-        {isMobile && (
-          <div className={styles.spHeader}>
-            <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
-            <div className={styles.infoItem}>
-              <a className={styles.telLink} href="tel:05201234567"><i className="fas fa-phone fa-rotate-90"></i></a>
-              <Link href="/form"><a className={styles.formLink}><i className="fas fa-envelope"></i></a></Link>
+        <div>
+          {isMobile && (
+            <div className={styles.spHeader}>
+              <img className={styles.logo} src="/logo.png" alt="みなみ矯正歯科" />
+              <div className={styles.infoItem}>
+                <a className={styles.telLink} href="tel:05201234567"><i className="fas fa-phone fa-rotate-90"></i></a>
+                <Link href="/form"><a className={styles.formLink}><i className="fas fa-envelope"></i></a></Link>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
         <div className={styles.eyecache}>
           {isPC && (
