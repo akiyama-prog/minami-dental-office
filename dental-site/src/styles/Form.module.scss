@@ -165,6 +165,12 @@ form{
     .radioButton div:first-child,.dateNtime input:first-child{
         margin-right: 1rem;
     }
+    .email{
+        width: 300px;
+    }
+    .textarea{
+        width: 300px;
+    }
     .submitBtn{
         text-align: center;
         button{
@@ -216,12 +222,6 @@ form{
     form{
         .field,.radioButton,.dateNtime{
             display: flex;
-        }
-        .email{
-            width: 200%;
-        }
-        .textarea{
-            width: 193%;
         }
         .label{
             margin-right: 2rem;
