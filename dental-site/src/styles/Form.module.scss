@@ -223,6 +223,9 @@ form{
         .field,.radioButton,.dateNtime{
             display: flex;
         }
+        .field:not(:nth-child(2)){
+            margin-bottom: 1rem;
+        }
         .label{
             margin-right: 2rem;
             width: 30%;
